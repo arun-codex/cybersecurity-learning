@@ -1,6 +1,6 @@
-# Roadmap Status
+# 🗺️ Roadmap Status
 
-## Completed through Day 34
+## ✅ Completed through Day 35
 
 ### Week 1 — Networking
 OSI, TCP/IP, IPv4/subnetting, ports.
@@ -14,15 +14,37 @@ Filesystem, core commands, grep/find, permissions, users/groups, processes/servi
 ### Week 4 — Integration
 ping, traceroute, firewall/firewalld, `ss`, and network troubleshooting.
 
-### Week 5 — Security fundamentals
-CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, IOC/TTP, phishing, brute force, password spraying, malware, credential theft, and MITRE ATT&CK basics.
+### Week 5 — Security fundamentals + SOC thinking
+CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, IOC/TTP, phishing, brute force, password spraying, malware, credential theft, MITRE ATT&CK basics, and a mini SOC investigation.
 
-## Current
-**Day 35 — Week 5 integration + mini SOC investigation**
+### Day 35 — Week 5 integration
+✅ Completed.
 
-## Next major skill
-**Week 6 — Wireshark**
+## 📊 Current progress
+**35 days completed**
 
-Capture traffic → Ethernet → IP → TCP/UDP → DNS → HTTP → TLS → filters → streams → endpoints → conversations → suspicious-traffic investigation.
+**5 weeks completed**
+
+Primary direction:
+**Networking → Linux → Security Fundamentals → SOC / Blue Team**
+
+## 🎯 Next major skill
+
+### Week 6 — Wireshark
+Capture authorized traffic → Ethernet → IP → TCP/UDP → DNS → HTTP → TLS → filters → streams → endpoints → conversations → suspicious-traffic investigation.
+
+## 🧠 Current analyst mindset
+
+```text
+Evidence
+   ↓
+Observation
+   ↓
+Hypothesis
+   ↓
+More evidence
+   ↓
+Conclusion
+```
 
 > Keep the repository evidence-based: document what was actually learned, practiced and investigated.
