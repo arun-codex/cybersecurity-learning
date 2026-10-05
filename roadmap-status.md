@@ -17,21 +17,31 @@ ping, traceroute, firewall/firewalld, `ss`, and network troubleshooting.
 ### Week 5 — Security fundamentals + SOC thinking
 CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, IOC/TTP, phishing, brute force, password spraying, malware, credential theft, MITRE ATT&CK basics, and a mini SOC investigation.
 
-### Day 35 — Week 5 integration
-✅ Completed.
+## 🦈 Current — Day 36: Wireshark Basics
 
-## 📊 Current progress
-**35 days completed**
+**Status: 🟡 In progress**
 
-**5 weeks completed**
+### Completed in Day 36 so far
+- Started Wireshark capture
+- Captured own traffic on `wlp0s20f3`
+- Generated DNS traffic with `dig example.com`
+- Applied the `dns` display filter
+- Inspected a DNS response
+- Identified UDP port 53
+- Identified client temporary port 58431
+- Identified an AAAA query for `example.com`
+- Observed a successful DNS response with one answer
+- Recorded approximately 67 ms response time
 
-Primary direction:
-**Networking → Linux → Security Fundamentals → SOC / Blue Team**
+### Remaining Day 36
+ICMP → TCP → TLS → save PCAPNG → complete notes.
 
-## 🎯 Next major skill
+## 🎯 Next
 
-### Week 6 — Wireshark
-Capture authorized traffic → Ethernet → IP → TCP/UDP → DNS → HTTP → TLS → filters → streams → endpoints → conversations → suspicious-traffic investigation.
+**Day 37 — Ethernet + IP Analysis**
+
+Then continue:
+TCP/UDP → DNS/HTTP → TLS → filters → streams → endpoints → conversations → mini SOC investigation.
 
 ## 🧠 Current analyst mindset
 
