@@ -5,10 +5,10 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Primary environment:** Fedora Linux
-- **Progress:** **Day 36 — Wireshark Basics in progress**
-- **Completed:** Days 1–35
+- **Progress:** **Day 36 ✅ Complete**
+- **Completed:** Days 1–36
 - **Current milestone:** Week 6 — Wireshark
-- **Next:** Complete Day 36, then continue Day 37 — Ethernet + IP analysis
+- **Next:** Day 37 — Ethernet + IP analysis
 
 ## 📚 Learning Path
 
@@ -70,27 +70,27 @@ Week 6  → Wireshark / packet analysis
 - MITRE ATT&CK basics
 - Mini SOC investigation
 
-## 🦈 Week 6 — Wireshark (In Progress)
+## 🦈 Week 6 — Wireshark
 
-### Day 36
-Started practical packet analysis using my own traffic.
+### Day 36 ✅ Complete
+Practical packet analysis using my own traffic on `wlp0s20f3`.
 
-First completed investigation:
-- Wireshark 4.6.9
-- Interface: `wlp0s20f3`
-- DNS display filter
-- UDP port 53
-- Client temporary port 58431
+Analyzed:
+- DNS response
+- ICMPv6 ping request/reply
+- TCP three-way handshake
+- TCP traffic on port 443
+- TLS Client Hello
+- TLS application data
+
+Key observations:
+- DNS over UDP port 53
 - AAAA query for `example.com`
-- Successful DNS response with one answer
-- Approx. 67 ms response time
-
-Remaining Day 36 work:
-- ICMP
-- TCP
-- TLS
-- Save PCAPNG
-- Finish notes
+- ICMPv6 Echo Request / Reply
+- TCP `50576 → 443`
+- SYN → SYN/ACK → ACK
+- TLS Client Hello with SNI `example.com`
+- Higher-layer TLS Application Data after the TCP handshake
 
 ## 🧪 Study Method
 **Concept → Practical → SOC connection → Active recall**
