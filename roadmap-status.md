@@ -1,6 +1,6 @@
 # 🗺️ Roadmap Status
 
-## ✅ Completed through Day 35
+## ✅ Completed through Day 36
 
 ### Week 1 — Networking
 OSI, TCP/IP, IPv4/subnetting, ports.
@@ -17,24 +17,32 @@ ping, traceroute, firewall/firewalld, `ss`, and network troubleshooting.
 ### Week 5 — Security fundamentals + SOC thinking
 CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, IOC/TTP, phishing, brute force, password spraying, malware, credential theft, MITRE ATT&CK basics, and a mini SOC investigation.
 
-## 🦈 Current — Day 36: Wireshark Basics
+## 🦈 Day 36 — Wireshark Basics
 
-**Status: 🟡 In progress**
+**Status: ✅ Completed**
 
-### Completed in Day 36 so far
-- Started Wireshark capture
+### Practical work completed
+- Started Wireshark
 - Captured own traffic on `wlp0s20f3`
-- Generated DNS traffic with `dig example.com`
-- Applied the `dns` display filter
-- Inspected a DNS response
-- Identified UDP port 53
-- Identified client temporary port 58431
-- Identified an AAAA query for `example.com`
-- Observed a successful DNS response with one answer
-- Recorded approximately 67 ms response time
+- Generated DNS, ping and HTTPS traffic
+- Analyzed DNS request/response traffic
+- Analyzed ICMPv6 Echo Request/Reply
+- Analyzed TCP SYN
+- Analyzed TCP SYN/ACK
+- Analyzed final TCP ACK
+- Observed TCP traffic carrying TLS
+- Analyzed TLS Client Hello
+- Observed TLS Application Data
+- Practiced packet-level evidence-based analysis
 
-### Remaining Day 36
-ICMP → TCP → TLS → save PCAPNG → complete notes.
+### Key packet observations
+- DNS: UDP source/destination ports **53 ↔ 58431**
+- DNS: **AAAA example.com**
+- ICMPv6: Echo Request / Echo Reply
+- TCP: **50576 → 443**
+- TCP handshake: **SYN → SYN/ACK → ACK**
+- TLS: **Client Hello**, SNI **example.com**
+- TLS Application Data observed after the handshake
 
 ## 🎯 Next
 
