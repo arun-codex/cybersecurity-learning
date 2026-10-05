@@ -5,9 +5,10 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Primary environment:** Fedora Linux
-- **Progress:** ✅ Through Day 35
-- **Current milestone:** Week 5 completed
-- **Next:** Week 6 — Wireshark
+- **Progress:** **Day 36 — Wireshark Basics in progress**
+- **Completed:** Days 1–35
+- **Current milestone:** Week 6 — Wireshark
+- **Next:** Complete Day 36, then continue Day 37 — Ethernet + IP analysis
 
 ## 📚 Learning Path
 
@@ -20,7 +21,7 @@ Week 5  → Security fundamentals + attacks + MITRE ATT&CK
 Week 6  → Wireshark / packet analysis
 ```
 
-## ✅ What I Have Completed
+## ✅ Completed
 
 ### Week 1 — Networking
 - OSI model
@@ -69,27 +70,35 @@ Week 6  → Wireshark / packet analysis
 - MITRE ATT&CK basics
 - Mini SOC investigation
 
+## 🦈 Week 6 — Wireshark (In Progress)
+
+### Day 36
+Started practical packet analysis using my own traffic.
+
+First completed investigation:
+- Wireshark 4.6.9
+- Interface: `wlp0s20f3`
+- DNS display filter
+- UDP port 53
+- Client temporary port 58431
+- AAAA query for `example.com`
+- Successful DNS response with one answer
+- Approx. 67 ms response time
+
+Remaining Day 36 work:
+- ICMP
+- TCP
+- TLS
+- Save PCAPNG
+- Finish notes
+
 ## 🧪 Study Method
 **Concept → Practical → SOC connection → Active recall**
 
 ## 🧠 Analyst Mindset
+
 ```text
 Evidence → Observation → Hypothesis → More evidence → Conclusion
 ```
-
-## 🚀 Next
-**Week 6 — Wireshark**
-- Capture authorized traffic
-- Ethernet
-- IP
-- TCP/UDP
-- DNS
-- HTTP
-- TLS
-- Wireshark filters
-- Follow streams
-- Endpoints
-- Conversations
-- Suspicious-traffic investigation
 
 > Dates in the daily notes are roadmap/planned dates reconstructed from the weekday sequence. They are not claimed as verified study timestamps.
