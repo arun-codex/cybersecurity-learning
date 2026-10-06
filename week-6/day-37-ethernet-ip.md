@@ -1,96 +1,16 @@
 # 📅 Day 37 — Ethernet + IP Analysis
 
-**Status:** 🟡 In Progress
+**Status:** ✅ Completed
 
 ## 🎯 Goal
 
 Connect previous networking knowledge with real packets.
 
-## ✅ What I Studied So Far
+## ✅ Packet Analysis Completed
 
-I used Wireshark to inspect real Ethernet, IPv4, TCP and ICMP packets.
+### Packet 1 — IPv6 TCP SYN
 
-### 🟦 Ethernet / Link Layer
-
-For an IPv4 ICMP Echo Request, I identified:
-
-```text
-Source MAC:
-de:2f:33:bc:53:d7
-
-Destination MAC:
-30:bd:13:f4:21:b8
-
-EtherType:
-IPv4 (0x0800)
-```
-
-### 🌐 IPv4 Layer
-
-Observed:
-
-```text
-Source IP:
-192.168.1.9
-
-Destination IP:
-1.1.1.1
-
-TTL:
-64
-
-Protocol:
-ICMP (1)
-
-Total Length:
-84 bytes
-```
-
-### 🔵 ICMP
-
-The packet was identified as:
-
-```text
-Type:
-Echo (ping) request (8)
-
-Code:
-0
-```
-
-The capture showed a ping request from my machine to `1.1.1.1`.
-
-### 🧠 Important Layer Distinction
-
-```text
-Ethernet frame
-    ↓
-EtherType = IPv4 (0x0800)
-    ↓
-IPv4 packet
-    ↓
-Protocol = ICMP (1)
-    ↓
-ICMP Echo Request
-```
-
-### 📦 Frame Length vs IP Total Length
-
-The capture showed:
-
-```text
-Frame Length:
-98 bytes
-
-IPv4 Total Length:
-84 bytes
-```
-
-This taught me that the captured Ethernet frame is larger than the IPv4 packet because the frame also contains the Ethernet header.
-
-### 🔵 Earlier TCP Observation
-
-I also practiced reading a TCP SYN packet:
+I practiced reading an IPv6 TCP SYN packet:
 
 ```text
 Source IPv6:
@@ -115,40 +35,201 @@ TCP Data Length:
 0 bytes
 ```
 
-## ✅ Day 37 Skills Practiced
+**What happened:** My computer initiated a TCP connection toward an HTTPS service on port 443.
 
-- Source MAC
-- Destination MAC
-- EtherType
-- Source IP
-- Destination IP
-- IPv4 version
-- TTL
-- Protocol
-- IPv4 total length
-- ICMP Echo Request
-- Wireshark packet details
-- Difference between frame length and IP packet total length
+**Why it matters:** It connected the earlier TCP theory to a real packet and reinforced source/destination ports and TCP flags.
 
-## ⏳ Still To Do
+### Packet 2 — IPv4 ICMP Echo Request
 
-According to the Day 37 plan:
+Ethernet:
 
-- Capture/analyze additional IPv4 packets
-- Use `ip.addr == 1.1.1.1`
-- Use `ip.src == YOUR_IP`
-- Document 3 packets
-- Inspect the ICMP Echo Reply from `1.1.1.1`
-- Answer the SOC questions:
-  - Who initiated the communication?
-  - What protocol was used?
-  - Was there a response?
-  - How frequently did it happen?
-  - What evidence do I have?
-- Finish the Day 37 definition of done
+```text
+Source MAC:
+de:2f:33:bc:53:d7
 
-## 📌 Current Assessment
+Destination MAC:
+30:bd:13:f4:21:b8
 
-**Partially completed — do not mark Day 37 complete yet.**
+EtherType:
+IPv4 (0x0800)
+```
 
-I have now completed the core Ethernet + IPv4 field identification exercise. The next task is to inspect the Echo Reply and then complete the SOC analysis/documentation.
+IPv4:
+
+```text
+Source IP:
+192.168.1.9
+
+Destination IP:
+1.1.1.1
+
+TTL:
+64
+
+Protocol:
+ICMP (1)
+
+Total Length:
+84 bytes
+```
+
+ICMP:
+
+```text
+Type:
+Echo (ping) request (8)
+
+Code:
+0
+```
+
+**What happened:** My machine sent an ICMP Echo Request to 1.1.1.1.
+
+**Why it matters:** It demonstrated the relationship between Ethernet → IPv4 → ICMP in a real packet.
+
+### Packet 3 — IPv4 ICMP Echo Reply
+
+```text
+Source IP:
+1.1.1.1
+
+Destination IP:
+192.168.1.9
+
+TTL:
+58
+
+Protocol:
+ICMP (1)
+
+Total Length:
+84 bytes
+
+Type:
+Echo (ping) reply (0)
+
+Code:
+0
+
+Sequence:
+5
+
+Response time:
+~42 ms
+```
+
+Wireshark associated the reply with its corresponding request.
+
+**What happened:** 1.1.1.1 replied to my ICMP Echo Request.
+
+**Why it matters:** The reply provides direct packet evidence that the destination responded.
+
+## 🧠 Important Layer Distinction
+
+```text
+Ethernet frame
+    ↓
+EtherType = IPv4 (0x0800)
+    ↓
+IPv4 packet
+    ↓
+Protocol = ICMP (1)
+    ↓
+ICMP Echo Request / Reply
+```
+
+## 📦 Frame Length vs IP Total Length
+
+Observed on the IPv4 ICMP request:
+
+```text
+Frame Length:
+98 bytes
+
+IPv4 Total Length:
+84 bytes
+```
+
+The Ethernet frame is larger because the captured frame contains the Ethernet header in addition to the IPv4 packet.
+
+## 🕵️ SOC Questions
+
+### Who initiated the communication?
+
+```text
+192.168.1.9
+```
+
+Evidence: the first packet was an ICMP Echo Request from 192.168.1.9 to 1.1.1.1.
+
+### What protocol was used?
+
+```text
+IPv4 + ICMP
+```
+
+Specifically:
+- Echo Request = ICMP Type 8
+- Echo Reply = ICMP Type 0
+
+### Was there a response?
+
+**Yes.**
+
+Evidence:
+- Source: 1.1.1.1
+- Destination: 192.168.1.9
+- ICMP Type 0 Echo Reply
+- Response time for the selected packet: approximately 42 ms
+
+### How frequently did it happen?
+
+The capture contained **5 ICMP Echo Replies**, matching the `ping -c 5 1.1.1.1` test.
+
+### What evidence do I have?
+
+- ICMP Echo Request packets from 192.168.1.9 to 1.1.1.1
+- ICMP Echo Reply packets from 1.1.1.1 to 192.168.1.9
+- Matching request/reply relationship in Wireshark
+- Five replies observed
+- Packet-level source, destination, protocol, TTL and length values
+
+## 🧠 Analyst Mindset
+
+Do not immediately say:
+
+> "This is an attack."
+
+First collect evidence.
+
+```text
+Evidence
+   ↓
+Observation
+   ↓
+Hypothesis
+   ↓
+More Evidence
+   ↓
+Conclusion
+```
+
+## ✅ Day 37 Definition of Done
+
+- ✅ Source MAC
+- ✅ Destination MAC
+- ✅ EtherType
+- ✅ Source IP
+- ✅ Destination IP
+- ✅ IPv4 TTL
+- ✅ Protocol
+- ✅ IPv4 total length
+- ✅ ICMP Echo Request
+- ✅ ICMP Echo Reply
+- ✅ Documented packet observations
+- ✅ Answered SOC investigation questions
+
+## 📝 Reflection
+
+Day 37 connected Ethernet and IPv4 theory with real Wireshark packets. I can now move from a packet list to the actual fields, identify who communicated, determine the protocol and direction, and use packet evidence to explain what happened.
+
