@@ -8,7 +8,7 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 - **Progress:** **Day 37 — Ethernet + IP Analysis in progress**
 - **Completed:** Days 1–36
 - **Current milestone:** Week 6 — Wireshark
-- **Next:** Complete Day 37 IPv4 packet analysis
+- **Next:** Inspect the IPv4 ICMP Echo Reply and finish Day 37
 
 ## 📚 Learning Path
 
@@ -84,27 +84,33 @@ Analyzed:
 - TLS application data
 
 ### Day 37 🟡 In Progress
-Practiced identifying:
-- Source MAC
-- Destination MAC
-- Ethernet II / EtherType
-- Source IP
-- Destination IP
-- Protocol
-- TCP source/destination ports
-- TCP SYN flag
+Completed core Ethernet + IPv4 field identification on an ICMP Echo Request.
+
+Observed:
+
+```text
+Source MAC      de:2f:33:bc:53:d7
+Destination MAC 30:bd:13:f4:21:b8
+EtherType        IPv4 (0x0800)
+
+Source IP        192.168.1.9
+Destination IP   1.1.1.1
+TTL              64
+Protocol         ICMP (1)
+Total Length     84 bytes
+ICMP Type        Echo Request (8)
+```
 
 Also learned the distinction between:
-- Frame length
+- Ethernet frame length
+- IPv4 total length
 - TCP data length
 
-Remaining Day 37 focus:
-- IPv4 packet capture to `1.1.1.1`
-- IPv4 TTL
-- IPv4 total length
-- `icmp`, `ip.addr`, and `ip.src` filters
-- 3-packet documentation
-- SOC questions
+Remaining Day 37:
+- Inspect ICMP Echo Reply
+- Finish SOC questions
+- Document 3 packets
+- Complete Day 37
 
 ## 🧪 Study Method
 **Concept → Practical → SOC connection → Active recall**
