@@ -5,10 +5,10 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Primary environment:** Fedora Linux
-- **Progress:** **Day 36 ✅ Complete**
+- **Progress:** **Day 37 — Ethernet + IP Analysis in progress**
 - **Completed:** Days 1–36
 - **Current milestone:** Week 6 — Wireshark
-- **Next:** Day 37 — Ethernet + IP analysis
+- **Next:** Complete Day 37 IPv4 packet analysis
 
 ## 📚 Learning Path
 
@@ -83,14 +83,28 @@ Analyzed:
 - TLS Client Hello
 - TLS application data
 
-Key observations:
-- DNS over UDP port 53
-- AAAA query for `example.com`
-- ICMPv6 Echo Request / Reply
-- TCP `50576 → 443`
-- SYN → SYN/ACK → ACK
-- TLS Client Hello with SNI `example.com`
-- Higher-layer TLS Application Data after the TCP handshake
+### Day 37 🟡 In Progress
+Practiced identifying:
+- Source MAC
+- Destination MAC
+- Ethernet II / EtherType
+- Source IP
+- Destination IP
+- Protocol
+- TCP source/destination ports
+- TCP SYN flag
+
+Also learned the distinction between:
+- Frame length
+- TCP data length
+
+Remaining Day 37 focus:
+- IPv4 packet capture to `1.1.1.1`
+- IPv4 TTL
+- IPv4 total length
+- `icmp`, `ip.addr`, and `ip.src` filters
+- 3-packet documentation
+- SOC questions
 
 ## 🧪 Study Method
 **Concept → Practical → SOC connection → Active recall**
