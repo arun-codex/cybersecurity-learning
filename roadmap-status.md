@@ -17,62 +17,48 @@ ping, traceroute, firewall/firewalld, `ss`, and network troubleshooting.
 ### Week 5 — Security fundamentals + SOC thinking
 CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, IOC/TTP, phishing, brute force, password spraying, malware, credential theft, MITRE ATT&CK basics, and a mini SOC investigation.
 
-## 🦈 Day 36 — Wireshark Basics
-
-**Status: ✅ Completed**
-
-### Practical work completed
-- Started Wireshark
-- Captured own traffic on `wlp0s20f3`
-- Generated DNS, ping and HTTPS traffic
-- Analyzed DNS request/response traffic
-- Analyzed ICMPv6 Echo Request/Reply
-- Analyzed TCP SYN
-- Analyzed TCP SYN/ACK
-- Analyzed final TCP ACK
-- Observed TCP traffic carrying TLS
-- Analyzed TLS Client Hello
-- Observed TLS Application Data
-- Practiced packet-level evidence-based analysis
-
 ## 🌐 Day 37 — Ethernet + IP Analysis
 
 **Status: 🟡 In Progress**
 
-### Studied so far
-- Source MAC
-- Destination MAC
-- Ethernet II / EtherType
-- Source IP
-- Destination IP
-- Protocol
-- TCP source/destination ports
-- TCP SYN flag
-- Difference between frame length and TCP data length
+### Completed so far
+- Identified Source MAC
+- Identified Destination MAC
+- Identified EtherType
+- Identified IPv4 source/destination
+- Identified TTL
+- Identified protocol number
+- Identified IPv4 total length
+- Identified ICMP Echo Request
+- Distinguished Ethernet frame length from IPv4 total length
+- Practiced reading Wireshark packet details
 
-### Example observed
-An IPv6 TCP SYN packet:
+### Observed ICMP Echo Request
 
 ```text
-Source port: 48506
-Destination port: 443
-TCP flag: SYN
-Frame length: 94 bytes
-TCP data length: 0 bytes
+Source MAC:      de:2f:33:bc:53:d7
+Destination MAC: 30:bd:13:f4:21:b8
+EtherType:       IPv4 (0x0800)
+
+Source IP:       192.168.1.9
+Destination IP:  1.1.1.1
+TTL:             64
+Protocol:        ICMP (1)
+Total Length:    84 bytes
+ICMP Type:       Echo Request (8)
 ```
 
 ### Still pending
-The planned Day 37 IPv4 exercise using:
-
-```bash
-ping -c 5 1.1.1.1
-```
-
-followed by IPv4 analysis and the required SOC questions.
+- Inspect ICMP Echo Reply from `1.1.1.1`
+- Use `ip.addr == 1.1.1.1`
+- Use `ip.src == YOUR_IP`
+- Document 3 packets
+- Answer the SOC questions
+- Finish the Day 37 definition of done
 
 ## 🎯 Next
 
-Finish **Day 37 — IPv4 packet analysis**, then continue with Day 38 TCP + UDP packet analysis.
+**Inspect the ICMP Echo Reply from 1.1.1.1**, then finish Day 37.
 
 ## 🧠 Current analyst mindset
 
