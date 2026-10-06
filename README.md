@@ -5,10 +5,10 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Primary environment:** Fedora Linux
-- **Progress:** **Day 37 — Ethernet + IP Analysis in progress**
-- **Completed:** Days 1–36
+- **Progress:** **Day 37 ✅ Complete**
+- **Completed:** Days 1–37
 - **Current milestone:** Week 6 — Wireshark
-- **Next:** Inspect the IPv4 ICMP Echo Reply and finish Day 37
+- **Next:** Day 38 — TCP + UDP packet analysis
 
 ## 📚 Learning Path
 
@@ -73,9 +73,7 @@ Week 6  → Wireshark / packet analysis
 ## 🦈 Week 6 — Wireshark
 
 ### Day 36 ✅ Complete
-Practical packet analysis using my own traffic on `wlp0s20f3`.
-
-Analyzed:
+Practical packet analysis:
 - DNS response
 - ICMPv6 ping request/reply
 - TCP three-way handshake
@@ -83,34 +81,42 @@ Analyzed:
 - TLS Client Hello
 - TLS application data
 
-### Day 37 🟡 In Progress
-Completed core Ethernet + IPv4 field identification on an ICMP Echo Request.
+### Day 37 ✅ Complete
+Ethernet + IPv4 packet analysis:
+- Source MAC
+- Destination MAC
+- EtherType
+- IPv4 source/destination
+- TTL
+- Protocol
+- IPv4 total length
+- ICMP Echo Request
+- ICMP Echo Reply
+- Request/reply comparison
+- SOC-style evidence questions
 
-Observed:
+Key observed flow:
 
 ```text
-Source MAC      de:2f:33:bc:53:d7
-Destination MAC 30:bd:13:f4:21:b8
-EtherType        IPv4 (0x0800)
-
-Source IP        192.168.1.9
-Destination IP   1.1.1.1
-TTL              64
-Protocol         ICMP (1)
-Total Length     84 bytes
-ICMP Type        Echo Request (8)
+192.168.1.9
+    ↓ ICMP Echo Request
+1.1.1.1
+    ↓ ICMP Echo Reply
+192.168.1.9
 ```
 
-Also learned the distinction between:
-- Ethernet frame length
-- IPv4 total length
-- TCP data length
+## 🎯 Next
 
-Remaining Day 37:
-- Inspect ICMP Echo Reply
-- Finish SOC questions
-- Document 3 packets
-- Complete Day 37
+**Day 38 — TCP + UDP Packet Analysis**
+
+Focus:
+- TCP flags: SYN, ACK, FIN, RST, PSH
+- TCP handshake
+- TCP data
+- TCP termination
+- Client/server ports
+- UDP DNS traffic
+- TCP vs UDP comparison
 
 ## 🧪 Study Method
 **Concept → Practical → SOC connection → Active recall**
