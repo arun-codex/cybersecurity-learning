@@ -35,21 +35,44 @@ CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, 
 - Observed TLS Application Data
 - Practiced packet-level evidence-based analysis
 
-### Key packet observations
-- DNS: UDP source/destination ports **53 ↔ 58431**
-- DNS: **AAAA example.com**
-- ICMPv6: Echo Request / Echo Reply
-- TCP: **50576 → 443**
-- TCP handshake: **SYN → SYN/ACK → ACK**
-- TLS: **Client Hello**, SNI **example.com**
-- TLS Application Data observed after the handshake
+## 🌐 Day 37 — Ethernet + IP Analysis
+
+**Status: 🟡 In Progress**
+
+### Studied so far
+- Source MAC
+- Destination MAC
+- Ethernet II / EtherType
+- Source IP
+- Destination IP
+- Protocol
+- TCP source/destination ports
+- TCP SYN flag
+- Difference between frame length and TCP data length
+
+### Example observed
+An IPv6 TCP SYN packet:
+
+```text
+Source port: 48506
+Destination port: 443
+TCP flag: SYN
+Frame length: 94 bytes
+TCP data length: 0 bytes
+```
+
+### Still pending
+The planned Day 37 IPv4 exercise using:
+
+```bash
+ping -c 5 1.1.1.1
+```
+
+followed by IPv4 analysis and the required SOC questions.
 
 ## 🎯 Next
 
-**Day 37 — Ethernet + IP Analysis**
-
-Then continue:
-TCP/UDP → DNS/HTTP → TLS → filters → streams → endpoints → conversations → mini SOC investigation.
+Finish **Day 37 — IPv4 packet analysis**, then continue with Day 38 TCP + UDP packet analysis.
 
 ## 🧠 Current analyst mindset
 
