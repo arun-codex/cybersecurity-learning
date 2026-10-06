@@ -1,6 +1,6 @@
 # 🗺️ Roadmap Status
 
-## ✅ Completed through Day 36
+## ✅ Completed through Day 37
 
 ### Week 1 — Networking
 OSI, TCP/IP, IPv4/subnetting, ports.
@@ -19,46 +19,59 @@ CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, 
 
 ## 🌐 Day 37 — Ethernet + IP Analysis
 
-**Status: 🟡 In Progress**
+**Status: ✅ Completed**
 
-### Completed so far
-- Identified Source MAC
-- Identified Destination MAC
-- Identified EtherType
-- Identified IPv4 source/destination
-- Identified TTL
-- Identified protocol number
-- Identified IPv4 total length
-- Identified ICMP Echo Request
-- Distinguished Ethernet frame length from IPv4 total length
-- Practiced reading Wireshark packet details
+### Completed
+- Source MAC
+- Destination MAC
+- EtherType
+- IPv4 source/destination
+- IPv4 TTL
+- Protocol
+- IPv4 total length
+- ICMP Echo Request
+- ICMP Echo Reply
+- Packet request/reply comparison
+- SOC questions using packet evidence
 
-### Observed ICMP Echo Request
+### Observed IPv4 ICMP exchange
 
 ```text
-Source MAC:      de:2f:33:bc:53:d7
-Destination MAC: 30:bd:13:f4:21:b8
-EtherType:       IPv4 (0x0800)
+192.168.1.9  →  1.1.1.1
+ICMP Echo Request
 
-Source IP:       192.168.1.9
-Destination IP:  1.1.1.1
-TTL:             64
-Protocol:        ICMP (1)
-Total Length:    84 bytes
-ICMP Type:       Echo Request (8)
+1.1.1.1  →  192.168.1.9
+ICMP Echo Reply
 ```
 
-### Still pending
-- Inspect ICMP Echo Reply from `1.1.1.1`
-- Use `ip.addr == 1.1.1.1`
-- Use `ip.src == YOUR_IP`
-- Document 3 packets
-- Answer the SOC questions
-- Finish the Day 37 definition of done
+Request:
+- TTL 64
+- ICMP Type 8
+- Total Length 84 bytes
+
+Reply:
+- TTL 58
+- ICMP Type 0
+- Total Length 84 bytes
+- Selected response time ~42 ms
+- Sequence 5
+
+### Analyst lesson
+Use packet evidence to answer:
+who initiated, what protocol was used, whether a response occurred, how often it occurred, and what evidence supports the conclusion.
 
 ## 🎯 Next
 
-**Inspect the ICMP Echo Reply from 1.1.1.1**, then finish Day 37.
+**Day 38 — TCP + UDP Packet Analysis**
+
+Focus:
+- SYN, ACK, FIN, RST, PSH
+- TCP handshake
+- TCP data
+- TCP termination
+- Client/server ports
+- UDP DNS query
+- TCP vs UDP
 
 ## 🧠 Current analyst mindset
 
