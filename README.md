@@ -5,10 +5,10 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Primary environment:** Fedora Linux
-- **Progress:** **Day 37 ✅ Complete**
+- **Progress:** **Day 38 — TCP + UDP Analysis in progress**
 - **Completed:** Days 1–37
 - **Current milestone:** Week 6 — Wireshark
-- **Next:** Day 38 — TCP + UDP packet analysis
+- **Next:** Finish UDP/DNS analysis for Day 38
 
 ## 📚 Learning Path
 
@@ -73,7 +73,6 @@ Week 6  → Wireshark / packet analysis
 ## 🦈 Week 6 — Wireshark
 
 ### Day 36 ✅ Complete
-Practical packet analysis:
 - DNS response
 - ICMPv6 ping request/reply
 - TCP three-way handshake
@@ -82,41 +81,34 @@ Practical packet analysis:
 - TLS application data
 
 ### Day 37 ✅ Complete
-Ethernet + IPv4 packet analysis:
-- Source MAC
-- Destination MAC
+- Ethernet + IPv4 packet analysis
+- Source/destination MAC
 - EtherType
 - IPv4 source/destination
 - TTL
-- Protocol
-- IPv4 total length
-- ICMP Echo Request
-- ICMP Echo Reply
-- Request/reply comparison
-- SOC-style evidence questions
+- ICMP request/reply
+- SOC evidence questions
 
-Key observed flow:
+### Day 38 🟡 In Progress
+TCP work completed:
+- SYN
+- SYN/ACK
+- ACK
+- TCP data
+- FIN + ACK
+- TCP flags
+- TCP connection establishment
+- TCP termination
+- Client/server ports
 
-```text
-192.168.1.9
-    ↓ ICMP Echo Request
-1.1.1.1
-    ↓ ICMP Echo Reply
-192.168.1.9
-```
+Remaining:
+- UDP DNS analysis
+- TCP vs UDP comparison
+- Final Day 38 documentation
 
 ## 🎯 Next
 
-**Day 38 — TCP + UDP Packet Analysis**
-
-Focus:
-- TCP flags: SYN, ACK, FIN, RST, PSH
-- TCP handshake
-- TCP data
-- TCP termination
-- Client/server ports
-- UDP DNS traffic
-- TCP vs UDP comparison
+Finish **Day 38 — UDP + DNS**, then complete the TCP vs UDP comparison and mark Day 38 complete.
 
 ## 🧪 Study Method
 **Concept → Practical → SOC connection → Active recall**
