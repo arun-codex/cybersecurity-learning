@@ -17,61 +17,66 @@ ping, traceroute, firewall/firewalld, `ss`, and network troubleshooting.
 ### Week 5 — Security fundamentals + SOC thinking
 CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, IOC/TTP, phishing, brute force, password spraying, malware, credential theft, MITRE ATT&CK basics, and a mini SOC investigation.
 
-## 🌐 Day 37 — Ethernet + IP Analysis
+## 🔵 Day 38 — TCP + UDP Packet Analysis
 
-**Status: ✅ Completed**
+**Status: 🟡 In Progress**
 
-### Completed
-- Source MAC
-- Destination MAC
-- EtherType
-- IPv4 source/destination
-- IPv4 TTL
-- Protocol
-- IPv4 total length
-- ICMP Echo Request
-- ICMP Echo Reply
-- Packet request/reply comparison
-- SOC questions using packet evidence
+### TCP completed
+- TCP SYN
+- TCP SYN/ACK
+- TCP ACK
+- Three-way handshake
+- TCP data
+- TCP FIN + ACK termination
+- SYN/ACK/FIN/RST/PSH flag recognition
+- Client/server port analysis
+- TCP payload length analysis
 
-### Observed IPv4 ICMP exchange
+### Observed examples
 
+Handshake:
 ```text
-192.168.1.9  →  1.1.1.1
-ICMP Echo Request
-
-1.1.1.1  →  192.168.1.9
-ICMP Echo Reply
+SYN
+SYN + ACK
+ACK
 ```
 
-Request:
-- TTL 64
-- ICMP Type 8
-- Total Length 84 bytes
+TCP data:
+```text
+192.168.1.9:51582
+        ↓
+192.168.1.4:8009
 
-Reply:
-- TTL 58
-- ICMP Type 0
-- Total Length 84 bytes
-- Selected response time ~42 ms
-- Sequence 5
+PSH + ACK
+TCP Segment Len = 110 bytes
+```
 
-### Analyst lesson
-Use packet evidence to answer:
-who initiated, what protocol was used, whether a response occurred, how often it occurred, and what evidence supports the conclusion.
+Termination:
+```text
+46438 → 443
+FIN + ACK
+Seq = 1930
+Ack = 6465
+TCP Segment Len = 0
+```
+
+### UDP still pending
+Next session:
+```bash
+dig example.com
+```
+
+Then:
+```text
+udp
+dns
+```
+
+After that, complete the TCP vs UDP comparison and Day 38 definition of done.
 
 ## 🎯 Next
 
-**Day 38 — TCP + UDP Packet Analysis**
-
-Focus:
-- SYN, ACK, FIN, RST, PSH
-- TCP handshake
-- TCP data
-- TCP termination
-- Client/server ports
-- UDP DNS query
-- TCP vs UDP
+**UDP DNS analysis → TCP vs UDP comparison → Day 38 complete**
 
 ## 🧠 Current analyst mindset
 
