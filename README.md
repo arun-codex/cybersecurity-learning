@@ -5,10 +5,10 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Primary environment:** Fedora Linux
-- **Progress:** **Day 38 — TCP + UDP Analysis in progress**
-- **Completed:** Days 1–37
+- **Progress:** **Day 38 ✅ Complete**
+- **Completed:** Days 1–38
 - **Current milestone:** Week 6 — Wireshark
-- **Next:** Finish UDP/DNS analysis for Day 38
+- **Next:** Day 39 — DNS + HTTP Packet Analysis
 
 ## 📚 Learning Path
 
@@ -20,55 +20,6 @@ Week 4  → Networking + Linux integration
 Week 5  → Security fundamentals + attacks + MITRE ATT&CK
 Week 6  → Wireshark / packet analysis
 ```
-
-## ✅ Completed
-
-### Week 1 — Networking
-- OSI model
-- TCP/IP model
-- IPv4 and subnetting
-- Ports and protocols
-
-### Week 2 — Network Traffic
-- DNS
-- TCP vs UDP
-- HTTP
-- HTTPS / TLS
-- Browser-to-server traffic flow
-
-### Week 3 — Linux
-- Linux filesystem
-- Core terminal commands
-- grep / find
-- Permissions
-- Users and groups
-- Processes and services
-- sudo
-- Pipes
-- Redirection
-- Command chaining
-
-### Week 4 — Integration
-- ping
-- traceroute
-- firewalld / firewall concepts
-- `ss`
-- Network troubleshooting
-
-### Week 5 — Security Fundamentals
-- CIA Triad
-- AAA
-- Least privilege
-- Defense in depth
-- Threat / vulnerability / exploit / risk
-- IOC / TTP
-- Phishing
-- Brute force
-- Password spraying
-- Malware
-- Credential theft
-- MITRE ATT&CK basics
-- Mini SOC investigation
 
 ## 🦈 Week 6 — Wireshark
 
@@ -89,26 +40,36 @@ Week 6  → Wireshark / packet analysis
 - ICMP request/reply
 - SOC evidence questions
 
-### Day 38 🟡 In Progress
-TCP work completed:
+### Day 38 ✅ Complete
+TCP:
 - SYN
 - SYN/ACK
 - ACK
+- Three-way handshake
 - TCP data
+- PSH + ACK
 - FIN + ACK
-- TCP flags
-- TCP connection establishment
 - TCP termination
 - Client/server ports
 
-Remaining:
-- UDP DNS analysis
-- TCP vs UDP comparison
-- Final Day 38 documentation
+UDP/DNS:
+- UDP source/destination ports
+- DNS query for `example.com`
+- DNS response
+- Transaction ID matching
+- A records
+- No TCP-style handshake
 
 ## 🎯 Next
 
-Finish **Day 38 — UDP + DNS**, then complete the TCP vs UDP comparison and mark Day 38 complete.
+**Day 39 — DNS + HTTP Packet Analysis**
+
+Focus:
+- DNS query/response analysis
+- DNS filters
+- HTTP request/response
+- HTTP status codes
+- Local HTTP lab
 
 ## 🧪 Study Method
 **Concept → Practical → SOC connection → Active recall**
