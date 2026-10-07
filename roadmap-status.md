@@ -1,6 +1,6 @@
 # 🗺️ Roadmap Status
 
-## ✅ Completed through Day 37
+## ✅ Completed through Day 38
 
 ### Week 1 — Networking
 OSI, TCP/IP, IPv4/subnetting, ports.
@@ -19,7 +19,7 @@ CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, 
 
 ## 🔵 Day 38 — TCP + UDP Packet Analysis
 
-**Status: 🟡 In Progress**
+**Status: ✅ Completed**
 
 ### TCP completed
 - TCP SYN
@@ -27,56 +27,35 @@ CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, 
 - TCP ACK
 - Three-way handshake
 - TCP data
+- PSH + ACK
 - TCP FIN + ACK termination
-- SYN/ACK/FIN/RST/PSH flag recognition
 - Client/server port analysis
 - TCP payload length analysis
 
-### Observed examples
+### UDP/DNS completed
+- UDP DNS query
+- UDP source/destination ports
+- DNS query for `example.com`
+- DNS response
+- Transaction ID `0x39df`
+- Two A records:
+  - `104.20.23.154`
+  - `172.66.147.243`
+- Response time ~65.8 ms
+- No TCP-style handshake for this DNS exchange
 
-Handshake:
+### Core lesson
 ```text
-SYN
-SYN + ACK
-ACK
+TCP:
+SYN → SYN/ACK → ACK → Data → FIN
+
+UDP/DNS:
+Query → Response
 ```
-
-TCP data:
-```text
-192.168.1.9:51582
-        ↓
-192.168.1.4:8009
-
-PSH + ACK
-TCP Segment Len = 110 bytes
-```
-
-Termination:
-```text
-46438 → 443
-FIN + ACK
-Seq = 1930
-Ack = 6465
-TCP Segment Len = 0
-```
-
-### UDP still pending
-Next session:
-```bash
-dig example.com
-```
-
-Then:
-```text
-udp
-dns
-```
-
-After that, complete the TCP vs UDP comparison and Day 38 definition of done.
 
 ## 🎯 Next
 
-**UDP DNS analysis → TCP vs UDP comparison → Day 38 complete**
+**Day 39 — DNS + HTTP Packet Analysis**
 
 ## 🧠 Current analyst mindset
 
