@@ -1,6 +1,6 @@
 # 🗺️ Roadmap Status
 
-## ✅ Completed through Day 38
+## ✅ Completed through Day 39
 
 ### Week 1 — Networking
 OSI, TCP/IP, IPv4/subnetting, ports.
@@ -37,25 +37,56 @@ CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, 
 - UDP source/destination ports
 - DNS query for `example.com`
 - DNS response
-- Transaction ID `0x39df`
-- Two A records:
-  - `104.20.23.154`
-  - `172.66.147.243`
-- Response time ~65.8 ms
+- Transaction ID matching
+- A records
 - No TCP-style handshake for this DNS exchange
 
-### Core lesson
-```text
-TCP:
-SYN → SYN/ACK → ACK → Data → FIN
+## 🟢 Day 39 — DNS + HTTP Packet Analysis
 
-UDP/DNS:
+**Status: ✅ Completed**
+
+### DNS completed
+- Captured DNS query/response
+- Used `dns` and `dns.qry.name == "example.com"`
+- Client: `192.168.1.9:43052`
+- DNS server: `192.168.1.1:53`
+- Hostname: `example.com`
+- Query type: A
+- Transaction ID: `0x46c4`
+- Response: No error
+- A records: `104.20.23.154`, `172.66.147.243`
+- Response time: ~69.4 ms
+- Matched query and response using the transaction ID
+
+### HTTP completed
+- Created local Python HTTP server on port 8000
+- Captured traffic on loopback interface `lo`
+- Observed TCP SYN → SYN/ACK → ACK
+- Analyzed `GET / HTTP/1.1`
+- Host: `127.0.0.1:8000`
+- User-Agent: `curl/8.18.0`
+- HTTP response: `200 OK`
+- Content-Type: `text/html`
+- Content-Length: `19`
+
+### Core lesson
+
+```text
+DNS:
 Query → Response
+Transaction ID → Correlation
+
+HTTP:
+TCP connection
+   ↓
+GET request
+   ↓
+200 OK response
 ```
 
 ## 🎯 Next
 
-**Day 39 — DNS + HTTP Packet Analysis**
+**Day 40 — TLS Analysis**
 
 ## 🧠 Current analyst mindset
 
