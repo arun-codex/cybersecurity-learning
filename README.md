@@ -5,10 +5,10 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Primary environment:** Fedora Linux
-- **Progress:** **Day 38 ✅ Complete**
-- **Completed:** Days 1–38
+- **Progress:** **Day 39 ✅ Complete**
+- **Completed:** Days 1–39
 - **Current milestone:** Week 6 — Wireshark
-- **Next:** Day 39 — DNS + HTTP Packet Analysis
+- **Next:** Day 40 — TLS Analysis
 
 ## 📚 Learning Path
 
@@ -60,16 +60,39 @@ UDP/DNS:
 - A records
 - No TCP-style handshake
 
+### Day 39 ✅ Complete
+DNS:
+- DNS query/response capture
+- `dns` filter
+- `dns.qry.name == "example.com"`
+- Client/server IP and port analysis
+- Transaction ID `0x46c4`
+- Successful DNS response
+- A records `104.20.23.154` and `172.66.147.243`
+- ~69.4 ms response time
+
+HTTP:
+- Local Python HTTP server
+- Loopback capture on `lo`
+- TCP three-way handshake
+- HTTP GET request
+- Host header
+- User-Agent
+- HTTP 200 OK
+- Content-Type
+- Content-Length
+
 ## 🎯 Next
 
-**Day 39 — DNS + HTTP Packet Analysis**
+**Day 40 — TLS Analysis**
 
 Focus:
-- DNS query/response analysis
-- DNS filters
-- HTTP request/response
-- HTTP status codes
-- Local HTTP lab
+- TLS packet identification
+- Client Hello
+- Server Hello
+- Certificate
+- Encrypted Application Data
+- Observable TLS metadata
 
 ## 🧪 Study Method
 **Concept → Practical → SOC connection → Active recall**
