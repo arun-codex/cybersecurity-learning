@@ -1,6 +1,6 @@
 # 🗺️ Roadmap Status
 
-## ✅ Completed through Day 39; Day 40 in progress
+## ✅ Completed through Day 40
 
 ### Week 1 — Networking
 OSI, TCP/IP, IPv4/subnetting, ports.
@@ -59,9 +59,9 @@ CIA, AAA, least privilege, defense in depth, threat/vulnerability/exploit/risk, 
 - User-Agent: `curl/8.18.0`
 - HTTP `200 OK`, Content-Type `text/html`, Content-Length `19`
 
-## 🟡 Day 40 — TLS + HTTPS Analysis
+## 🟢 Day 40 — TLS + HTTPS Analysis
 
-**Status: 🟡 In progress — practical and SOC mini-investigation done; final active recall pending.**
+**Status: ✅ Completed — practical capture, SOC mini-investigation, and final active recall passed (3.5/4).**
 
 ### Client Hello
 - Used `curl https://example.com` to generate HTTPS traffic
@@ -100,16 +100,15 @@ Identified evidence to investigate:
 
 HTTPS or frequent connections alone do not prove malicious activity.
 
-### Resume next session
-Answer these without notes before marking Day 40 complete:
-1. What is the difference between TCP and TLS?
-2. Order: TCP connection → TLS handshake → encrypted application traffic.
-3. Why might a TLS 1.3 Certificate message not appear as a decoded Certificate without session secrets?
-4. Why are frequent HTTPS connections alone insufficient to conclude malicious activity?
+### Final active recall — passed (3.5/4)
+- **TCP vs TLS:** TCP establishes the transport connection and provides reliable, ordered delivery; the TCP three-way handshake is used to establish the connection. TLS protects application communication through encryption, integrity and authentication.
+- **Sequence:** TCP connection → TLS handshake → encrypted application traffic.
+- **Certificate visibility:** TLS 1.3 encrypts the Certificate message after Server Hello; without appropriate session secrets, Wireshark may not decode it as a Certificate.
+- **SOC reasoning:** 200 HTTPS connections in 10 minutes is a reason to investigate, not proof of maliciousness. Compare with normal behavior and inspect timing, traffic volume, DNS history and endpoint telemetry when available.
 
 ## 🎯 Current next step
 
-**Finish Day 40 active recall**, then update status based on the answers.
+**Day 41 — continue Week 6 Wireshark analysis.**
 
 ## 🧠 Analyst mindset
 
