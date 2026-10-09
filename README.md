@@ -4,11 +4,9 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
-- **Primary environment:** Fedora Linux
-- **Progress:** **Day 39 ✅ Complete**
-- **Completed:** Days 1–39
+- **Progress:** **Days 1–39 ✅ Complete; Day 40 🟡 In progress**
 - **Current milestone:** Week 6 — Wireshark
-- **Next:** Day 40 — TLS Analysis
+- **Resume at:** Day 40 final active recall (TLS vs TCP, traffic sequence, TLS 1.3 certificate visibility, and evidence-based conclusions)
 
 ## 📚 Learning Path
 
@@ -42,29 +40,23 @@ Week 6  → Wireshark / packet analysis
 
 ### Day 38 ✅ Complete
 TCP:
-- SYN
-- SYN/ACK
-- ACK
+- SYN, SYN/ACK, ACK
 - Three-way handshake
-- TCP data
-- PSH + ACK
-- FIN + ACK
-- TCP termination
+- TCP data, PSH + ACK
+- FIN + ACK and termination
 - Client/server ports
 
 UDP/DNS:
 - UDP source/destination ports
-- DNS query for `example.com`
-- DNS response
+- DNS query and response for `example.com`
 - Transaction ID matching
 - A records
-- No TCP-style handshake
+- No TCP-style handshake for the observed DNS exchange
 
 ### Day 39 ✅ Complete
 DNS:
 - DNS query/response capture
-- `dns` filter
-- `dns.qry.name == "example.com"`
+- `dns` filter and `dns.qry.name == "example.com"`
 - Client/server IP and port analysis
 - Transaction ID `0x46c4`
 - Successful DNS response
@@ -75,27 +67,21 @@ HTTP:
 - Local Python HTTP server
 - Loopback capture on `lo`
 - TCP three-way handshake
-- HTTP GET request
-- Host header
-- User-Agent
-- HTTP 200 OK
-- Content-Type
-- Content-Length
+- HTTP GET request, Host header and User-Agent
+- HTTP 200 OK, Content-Type and Content-Length
 
-## 🎯 Next
-
-**Day 40 — TLS Analysis**
-
-Focus:
-- TLS packet identification
-- Client Hello
-- Server Hello
-- Certificate
-- Encrypted Application Data
-- Observable TLS metadata
+### Day 40 🟡 In progress — TLS + HTTPS Analysis
+- Captured HTTPS traffic generated with `curl https://example.com`
+- Identified Client Hello and SNI `example.com`
+- Observed advertised TLS 1.2 / TLS 1.3 support
+- Identified Server Hello, negotiated TLS 1.3 and `TLS_AES_256_GCM_SHA384`
+- Inspected encrypted application data and compared frame, TCP payload and TLS record lengths
+- Tested the Certificate display filter; no decoded matches in the current view, which does not prove a certificate was absent
+- Completed a SOC evidence exercise: IPs, ports, packet/data sizes, DNS activity and connection frequency
+- **Pending:** final active recall; do not mark Day 40 complete yet
 
 ## 🧪 Study Method
-**Concept → Practical → SOC connection → Active recall**
+**Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
 
 ## 🧠 Analyst Mindset
 
