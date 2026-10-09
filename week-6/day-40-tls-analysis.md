@@ -1,6 +1,6 @@
 # 🦈 Day 40 — TLS + HTTPS Analysis
 
-**Status: 🟡 In progress — practical capture and SOC mini-investigation done; final active recall pending.**
+**Status: ✅ Complete — practical capture, SOC mini-investigation, and final active recall passed (3.5/4).**
 
 ## 🎯 Goal
 
@@ -87,16 +87,20 @@ Earlier recall was successful for:
 - TLS 1.3 was negotiated
 - Client Hello offers options; Server Hello selects connection parameters
 
-The final recall checkpoint is **still pending**. Resume here next session without notes:
+### Final recall results — passed (3.5/4)
 
-1. Explain the difference between TCP and TLS.
-2. Put these in order: TCP connection, TLS handshake, encrypted application traffic.
-3. Explain why a TLS 1.3 Certificate message may not appear as a decoded Certificate without session secrets.
-4. Explain why frequent HTTPS connections alone are not enough to conclude malicious activity.
+1. **TCP vs TLS — mostly correct:** TCP establishes the connection and provides reliable, ordered data delivery; the three-way handshake is the connection-establishment process. TLS protects application communication through encryption, integrity and authentication.
+2. **Sequence — correct:** TCP connection → TLS handshake → encrypted application traffic.
+3. **Certificate visibility — correct:** TLS 1.3 encrypts the Certificate message after Server Hello; without the appropriate session secrets, Wireshark may not decode it as a Certificate.
+4. **SOC investigation — correct:** frequent HTTPS connections alone do not prove malicious activity. Investigate source/destination IPs and ports, compare connection frequency with normal behavior, and inspect timing, traffic volume, DNS history and endpoint telemetry when available.
 
 ## ✅ Definition of done
 
-Do not mark Day 40 complete until the four recall questions above are answered and corrected. Then update this file and the repository status.
+**Definition of done met.** Practical capture, analysis, SOC evidence exercise and final active recall are complete.
+
+## 🎯 Next session
+
+**Day 41 — continue Week 6 Wireshark analysis.**
 
 ## 🔑 Key lesson
 
