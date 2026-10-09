@@ -4,9 +4,9 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
-- **Progress:** **Days 1–39 ✅ Complete; Day 40 🟡 In progress**
+- **Progress:** **Days 1–40 ✅ Complete**
 - **Current milestone:** Week 6 — Wireshark
-- **Resume at:** Day 40 final active recall (TLS vs TCP, traffic sequence, TLS 1.3 certificate visibility, and evidence-based conclusions)
+- **Next:** Day 41 — continue Week 6 packet analysis
 
 ## 📚 Learning Path
 
@@ -70,7 +70,7 @@ HTTP:
 - HTTP GET request, Host header and User-Agent
 - HTTP 200 OK, Content-Type and Content-Length
 
-### Day 40 🟡 In progress — TLS + HTTPS Analysis
+### Day 40 ✅ Complete — TLS + HTTPS Analysis
 - Captured HTTPS traffic generated with `curl https://example.com`
 - Identified Client Hello and SNI `example.com`
 - Observed advertised TLS 1.2 / TLS 1.3 support
@@ -78,7 +78,12 @@ HTTP:
 - Inspected encrypted application data and compared frame, TCP payload and TLS record lengths
 - Tested the Certificate display filter; no decoded matches in the current view, which does not prove a certificate was absent
 - Completed a SOC evidence exercise: IPs, ports, packet/data sizes, DNS activity and connection frequency
-- **Pending:** final active recall; do not mark Day 40 complete yet
+- **Active recall passed:** explained TCP vs TLS, ordered TCP → TLS handshake → encrypted application traffic, explained TLS 1.3 Certificate visibility, and correctly avoided declaring frequent HTTPS connections malicious without more evidence
+- **Result:** 3.5/4 — passed
+
+## 🎯 Next
+
+**Day 41 — continue Week 6 Wireshark analysis**
 
 ## 🧪 Study Method
 **Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
