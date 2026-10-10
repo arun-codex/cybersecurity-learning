@@ -4,7 +4,7 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
-- **Progress:** **Days 1–40 ✅ Complete**
+- **Progress:** **Days 1–41 ✅ Complete**
 - **Current milestone:** Week 6 — Wireshark
 - **Next:** Day 41 — continue Week 6 packet analysis
 
@@ -81,16 +81,17 @@ HTTP:
 - **Active recall passed:** explained TCP vs TLS, ordered TCP → TLS handshake → encrypted application traffic, explained TLS 1.3 Certificate visibility, and correctly avoided declaring frequent HTTPS connections malicious without more evidence
 - **Result:** 3.5/4 — passed
 
-### Day 41 🟡 In progress — Wireshark Filters
+### Day 41 ✅ Complete — Wireshark Filters
 - Practiced DNS, IPv4 address, TCP/UDP port, SYN, RST, retransmission, duplicate ACK and TLS display filters
 - Used Follow TCP Stream on `tcp.stream eq 3`
 - Examined IPv4/IPv6 Endpoints and TCP/UDP Conversations
 - Saved evidence and Top 10 filters in [`notes/day41-filters.md`](notes/day41-filters.md)
-- **Status:** practical challenge documented; keep Day 41 in progress until final review / recall is complete
+- **Active recall passed:** explained that `tls` can show handshake packets as well as application-data packets; distinguished protocol filtering from TCP port filtering
+- **Result:** completed practical filters, Follow TCP Stream, Endpoints, Conversations, and evidence notes
 
 ## 🎯 Next
 
-**Finish Day 41 review, then continue to Day 42**
+**Day 42 — Continue Week 6 Wireshark analysis**
 
 ## 🧪 Study Method
 **Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
