@@ -106,9 +106,38 @@ HTTPS or frequent connections alone do not prove malicious activity.
 - **Certificate visibility:** TLS 1.3 encrypts the Certificate message after Server Hello; without appropriate session secrets, Wireshark may not decode it as a Certificate.
 - **SOC reasoning:** 200 HTTPS connections in 10 minutes is a reason to investigate, not proof of maliciousness. Compare with normal behavior and inspect timing, traffic volume, DNS history and endpoint telemetry when available.
 
+## 🟡 Day 41 — Wireshark Filters
+
+**Status: 🟡 In progress — practical challenge findings recorded in `notes/day41-filters.md`; final review pending.**
+
+### Display filters practiced
+- `dns`: 2 packets — query and response for `example.com` (AAAA)
+- `ip.dst == 192.168.1.9`: 3 packets
+- `ip.src == 192.168.1.9`: 5 packets
+- `ip.addr == 192.168.1.9`: 8 IPv4 packets
+- `tcp.port == 443`: 72 packets
+- `udp.port == 53`: 2 packets
+- `tcp.flags.syn == 1`: 2 packets; initial SYN filter: 1 packet
+- `tcp.flags.reset == 1`: 0 packets
+- `tcp.analysis.retransmission`: 0 packets
+- `tcp.analysis.duplicate_ack`: 0 packets
+- `tls`: 28 packets
+
+### Analysis tools
+- Followed `tcp.stream eq 3`; approximately 10 KB of encrypted conversation data was reassembled.
+- IPv4 top endpoint: `192.168.1.9` with 8 packets / ~1 KB.
+- Top IPv6 endpoint shown: `2401:4900:88b4:91a:d6fe:fa54:f22b:c5a5`, 89 packets / ~46 KB.
+- TCP Conversations: 9 conversations; top by packets = 25 packets / 11 KB (stream 6); top by bytes = 17 KB / 20 packets (stream 4).
+- DNS over UDP: `192.168.1.9:48606` ↔ `192.168.1.1:53`, 2 packets / 192 bytes.
+
+### Core lesson
+`tcp.port == 443` matches TCP packets based on port; `tls` matches packets Wireshark dissects as TLS. Packet counts are not connection counts. Zero matching retransmission/RST/duplicate-ACK packets in this capture do not prove those events never occur.
+
+See [`notes/day41-filters.md`](notes/day41-filters.md) for the Top 10 filters and detailed results.
+
 ## 🎯 Current next step
 
-**Day 41 — continue Week 6 Wireshark analysis.**
+**Finish Day 41 review / recall, then move to Day 42.**
 
 ## 🧠 Analyst mindset
 
