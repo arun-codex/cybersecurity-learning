@@ -1,6 +1,6 @@
 # 🗺️ Roadmap Status
 
-## ✅ Completed through Day 40
+## ✅ Completed through Day 41
 
 ### Week 1 — Networking
 OSI, TCP/IP, IPv4/subnetting, ports.
@@ -106,9 +106,9 @@ HTTPS or frequent connections alone do not prove malicious activity.
 - **Certificate visibility:** TLS 1.3 encrypts the Certificate message after Server Hello; without appropriate session secrets, Wireshark may not decode it as a Certificate.
 - **SOC reasoning:** 200 HTTPS connections in 10 minutes is a reason to investigate, not proof of maliciousness. Compare with normal behavior and inspect timing, traffic volume, DNS history and endpoint telemetry when available.
 
-## 🟡 Day 41 — Wireshark Filters
+## 🟢 Day 41 — Wireshark Filters
 
-**Status: 🟡 In progress — practical challenge findings recorded in `notes/day41-filters.md`; final review pending.**
+**Status: ✅ Completed — practical filtering, stream inspection, endpoint/conversation analysis and active recall passed.**
 
 ### Display filters practiced
 - `dns`: 2 packets — query and response for `example.com` (AAAA)
@@ -133,11 +133,15 @@ HTTPS or frequent connections alone do not prove malicious activity.
 ### Core lesson
 `tcp.port == 443` matches TCP packets based on port; `tls` matches packets Wireshark dissects as TLS. Packet counts are not connection counts. Zero matching retransmission/RST/duplicate-ACK packets in this capture do not prove those events never occur.
 
+### Final active recall — passed
+- `tls` can show TLS handshake packets (such as Client Hello and Server Hello) as well as application-data packets; it is not limited to encrypted application data.
+- `tcp.port == 443` matches TCP packets based on port, while `tls` matches packets Wireshark dissects as TLS. Their counts can differ and do not represent connection counts.
+
 See [`notes/day41-filters.md`](notes/day41-filters.md) for the Top 10 filters and detailed results.
 
 ## 🎯 Current next step
 
-**Finish Day 41 review / recall, then move to Day 42.**
+**Day 42 — continue Week 6 Wireshark analysis.**
 
 ## 🧠 Analyst mindset
 
