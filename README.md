@@ -81,9 +81,16 @@ HTTP:
 - **Active recall passed:** explained TCP vs TLS, ordered TCP → TLS handshake → encrypted application traffic, explained TLS 1.3 Certificate visibility, and correctly avoided declaring frequent HTTPS connections malicious without more evidence
 - **Result:** 3.5/4 — passed
 
+### Day 41 🟡 In progress — Wireshark Filters
+- Practiced DNS, IPv4 address, TCP/UDP port, SYN, RST, retransmission, duplicate ACK and TLS display filters
+- Used Follow TCP Stream on `tcp.stream eq 3`
+- Examined IPv4/IPv6 Endpoints and TCP/UDP Conversations
+- Saved evidence and Top 10 filters in [`notes/day41-filters.md`](notes/day41-filters.md)
+- **Status:** practical challenge documented; keep Day 41 in progress until final review / recall is complete
+
 ## 🎯 Next
 
-**Day 41 — continue Week 6 Wireshark analysis**
+**Finish Day 41 review, then continue to Day 42**
 
 ## 🧪 Study Method
 **Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
