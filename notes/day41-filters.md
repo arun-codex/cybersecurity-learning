@@ -1,6 +1,6 @@
 # 🔎 Day 41 — Wireshark Filters
 
-**Status: 🟡 In progress / practical challenge investigated; notes created from the Day 36 PCAP.**
+**Status: ✅ Complete — practical challenge and final active recall passed.**
 
 ## Goal
 
@@ -119,6 +119,12 @@ Observed counts: `tcp.port == 443` = 72 packets; `tls` = 28 packets.
 - High packet or byte counts alone do not prove malicious activity.
 - A valid filter with zero results is still a useful observation about the capture.
 
+## Final active recall — passed
+
+Question: Does the `tls` filter show only encrypted application data, or can it also show handshake packets?
+
+Answer: It can show handshake packets (for example, Client Hello and Server Hello) as well as TLS application-data packets. The filter matches traffic Wireshark dissects as TLS, not only encrypted application payload.
+
 ## Next
 
-Finish any final review / active recall, then update roadmap status based on demonstrated understanding.
+**Day 42 — continue Week 6 Wireshark analysis.**
