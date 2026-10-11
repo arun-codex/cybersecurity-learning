@@ -91,7 +91,15 @@ HTTP:
 
 ## 🎯 Next
 
-**Day 42 — Continue Week 6 Wireshark analysis**
+### Day 42 🟡 In progress — Mini SOC Wireshark Investigation
+- Generated 20 local TCP connection attempts to `127.0.0.1:9999` on loopback `lo`
+- Confirmed 20 initial SYN packets and 20 RST responses; 40 packets matched `tcp.port == 9999`
+- Recorded an evidence-based interpretation and known limitations in [`investigations/day42-wireshark-investigation.md`](investigations/day42-wireshark-investigation.md)
+- **Pending:** final theory test and remaining practical checklist
+
+## 🎯 Next
+
+**Finish Day 42 theory/practical review before marking complete**
 
 ## 🧪 Study Method
 **Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
