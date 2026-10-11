@@ -6,7 +6,7 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Progress:** **Days 1–41 ✅ Complete**
 - **Current milestone:** Week 6 — Wireshark
-- **Next:** Day 41 — continue Week 6 packet analysis
+- **Current:** Day 42 — Mini SOC Wireshark Investigation (in progress)
 
 ## 📚 Learning Path
 
@@ -85,16 +85,17 @@ HTTP:
 - Practiced DNS, IPv4 address, TCP/UDP port, SYN, RST, retransmission, duplicate ACK and TLS display filters
 - Used Follow TCP Stream on `tcp.stream eq 3`
 - Examined IPv4/IPv6 Endpoints and TCP/UDP Conversations
-- Saved evidence and Top 10 filters in [`notes/day41-filters.md`](notes/day41-filters.md)
+- Week 6 day file: [`week-6/day-41-filters-streams-endpoints.md`](week-6/day-41-filters-streams-endpoints.md)
+- Filter cheat sheet: [`week-6/wireshark-filters.md`](week-6/wireshark-filters.md)
+- Detailed filter results: [`notes/day41-filters.md`](notes/day41-filters.md)
 - **Active recall passed:** explained that `tls` can show handshake packets as well as application-data packets; distinguished protocol filtering from TCP port filtering
 - **Result:** completed practical filters, Follow TCP Stream, Endpoints, Conversations, and evidence notes
 
-## 🎯 Next
-
-### Day 42 🟡 In progress — Mini SOC Wireshark Investigation
+## 🟡 Day 42 — Mini SOC Wireshark Investigation (in progress)
+- Week 6 day file: [`week-6/day-42-wireshark-investigation.md`](week-6/day-42-wireshark-investigation.md)
+- Full investigation report: [`investigations/day42-wireshark-investigation.md`](investigations/day42-wireshark-investigation.md)
 - Generated 20 local TCP connection attempts to `127.0.0.1:9999` on loopback `lo`
 - Confirmed 20 initial SYN packets and 20 RST responses; 40 packets matched `tcp.port == 9999`
-- Recorded an evidence-based interpretation and known limitations in [`investigations/day42-wireshark-investigation.md`](investigations/day42-wireshark-investigation.md)
 - **Pending:** final theory test and remaining practical checklist
 
 ## 🎯 Next
