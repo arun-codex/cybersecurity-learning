@@ -6,8 +6,10 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Progress:** **Days 1–42 ✅ Complete**
 - **Latest completed milestone:** Week 6 — Wireshark
-- **Current week:** Week 7 — Nmap + network enumeration
-- **Next:** Day 43 — Host discovery and Nmap fundamentals
+- **Current week:** Week 7 — Nmap + Network Enumeration (planned; Day 43 not yet complete)
+- **Full plan:** [Week 7 Days 43–49](week-7/week-7-nmap-network-enumeration.md)
+- **Previous-week review:** [Week 6 retrospective — Me vs. Me](week-6/week-6-retrospective.md)
+- **Next:** Day 43 — Nmap installation, purpose + first localhost scan
 
 ## 📚 Learning Path
 
@@ -102,9 +104,18 @@ HTTP:
 - **Week 6 practical checklist completed across multiple captures**; see the day file and full investigation report
 - **Week 6 retrospective:** [Completed goals, personal feedback and Week 7 improvement plan](week-6/week-6-retrospective.md)
 
+## 🧭 Week 7 — Nmap + Network Enumeration
+
+**Status: Planned — tasks remain unchecked until demonstrated with actual commands, outputs and explanations.**
+
+- [Full Days 43–49 plan](week-7/week-7-nmap-network-enumeration.md)
+- [Week 6 retrospective and feedback](week-6/week-6-retrospective.md)
+- Previous-week theory baseline: **7.75/10**
+- Carry-forward focus: precise terminology (endpoint vs. conversation; FIN vs. RST), reading the exact selected packet, separating observation from interpretation, documenting limitations, and independent recall.
+
 ## 🎯 Next
 
-**Day 43 — Nmap + network enumeration (Week 7)**
+**Day 43 — Nmap installation, purpose + first localhost scan**
 
 ## 🧪 Study Method
 **Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
