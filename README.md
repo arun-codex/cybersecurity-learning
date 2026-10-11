@@ -5,9 +5,9 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Progress:** **Days 1–42 ✅ Complete**
-- **Current milestone:** Week 6 — Wireshark
-- **Current milestone:** Week 6 — Wireshark completed
-- **Next:** Day 43 — Nmap + network enumeration (Week 7)
+- **Latest completed milestone:** Week 6 — Wireshark
+- **Current week:** Week 7 — Nmap + network enumeration
+- **Next:** Day 43 — Host discovery and Nmap fundamentals
 
 ## 📚 Learning Path
 
@@ -100,6 +100,7 @@ HTTP:
 - Reused documented Day 41 evidence for Endpoints, Conversations and Follow TCP Stream
 - Theory test: **7.75/10**; passed with targeted correction of endpoint/conversation terminology
 - **Week 6 practical checklist completed across multiple captures**; see the day file and full investigation report
+- **Week 6 retrospective:** [Completed goals, personal feedback and Week 7 improvement plan](week-6/week-6-retrospective.md)
 
 ## 🎯 Next
 
