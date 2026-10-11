@@ -80,6 +80,7 @@ These skills were verified across separate relevant captures; they were not all 
 - Day 41 filter reference: [`wireshark-filters.md`](wireshark-filters.md).
 - Day 41 practical notes: [`day-41-filters-streams-endpoints.md`](day-41-filters-streams-endpoints.md).
 - Full Day 42 report: [`investigations/day42-wireshark-investigation.md`](../investigations/day42-wireshark-investigation.md).
+- Week 6 retrospective and Week 7 improvement plan: [`week-6-retrospective.md`](week-6-retrospective.md).
 
 ## TLS handshake evidence (separate Wi-Fi capture)
 
