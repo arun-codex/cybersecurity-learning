@@ -1,6 +1,6 @@
 # 🦈 Day 42 — Mini SOC Wireshark Investigation
 
-**Status: 🟡 In progress — controlled lab and report drafted; final theory test and remaining practical checklist pending.**
+**Status: ✅ Complete — controlled lab, practical verification across multiple captures, investigation report, and theory test completed.**
 
 ## 🎯 Scenario
 
@@ -56,13 +56,38 @@ The requested report with the full sections for scenario, capture, time range, s
 
 [`investigations/day42-wireshark-investigation.md`](../investigations/day42-wireshark-investigation.md)
 
-## 📝 Remaining definition of done
+## ✅ Definition of done — complete
 
-- [ ] Complete the 10-question theory test without notes.
-- [ ] Confirm practical evidence in a capture: DNS query/response, TCP handshake/connection, UDP, HTTP, TLS handshake, IPs, ports, endpoint, conversation and TCP stream.
-- [ ] Identify and document one potentially unusual pattern from a capture.
-- [ ] Complete active recall and review before marking Day 42 complete.
+### Practical evidence checklist
+These skills were verified across separate relevant captures; they were not all claimed to come from one PCAP.
+
+- [x] DNS query and response: loopback query for `ab.chatgpt.com`, with a matching response correlated by transaction ID `0xbee3`.
+- [x] TCP handshake: SYN → SYN/ACK → ACK in `tcp.stream eq 0`.
+- [x] TCP connection/ports: client ephemeral port to server port `443`.
+- [x] UDP traffic: UDP packets including DNS and QUIC were visible in the Wi-Fi capture.
+- [x] HTTP: local `GET /` to `127.0.0.1:8000` and response `HTTP/1.0 200 OK`.
+- [x] TLS handshake: Client Hello with SNI `example.com` and Server Hello identified in a separate capture.
+- [x] Source/destination IPs and ports: inspected in TCP, UDP, DNS and HTTP packet details.
+- [x] Endpoint and conversation: reviewed in Day 41 Endpoints/Conversations analysis.
+- [x] TCP stream: followed `tcp.stream eq 0` in the Day 42 handshake capture and `tcp.stream eq 3` in Day 41 analysis.
+- [x] Potentially unusual pattern documented: 20 initial SYNs and 20 RST responses to localhost port `9999`, known to be deliberately generated for this lab.
+
+### Final theory test
+- **Score: 7.75/10 — passed.**
+- Corrected/reviewed endpoint vs conversation, RST meaning, and the need for corroborating evidence before deciding activity is malicious.
+
+### Key evidence
+- Day 41 filter reference: [`wireshark-filters.md`](wireshark-filters.md).
+- Day 41 practical notes: [`day-41-filters-streams-endpoints.md`](day-41-filters-streams-endpoints.md).
+- Full Day 42 report: [`investigations/day42-wireshark-investigation.md`](../investigations/day42-wireshark-investigation.md).
+
+## TLS handshake evidence (separate Wi-Fi capture)
+
+- `tls.handshake.type == 1` displayed a Client Hello with SNI `example.com`.
+- `tls.handshake.type == 2` displayed a Server Hello (packet 27 in that capture).
+- Server source port: `443`; client destination port: `46608`.
+- This was a separate 56-packet capture, not the localhost port-9999 PCAP.
 
 ## ➡️ Next
 
-Resume with the Day 42 theory test, then complete any practical evidence items not yet demonstrated.
+**Day 43 — Nmap + network enumeration (Week 7).**
