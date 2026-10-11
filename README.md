@@ -4,9 +4,10 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
-- **Progress:** **Days 1–41 ✅ Complete**
+- **Progress:** **Days 1–42 ✅ Complete**
 - **Current milestone:** Week 6 — Wireshark
-- **Current:** Day 42 — Mini SOC Wireshark Investigation (in progress)
+- **Current milestone:** Week 6 — Wireshark completed
+- **Next:** Day 43 — Nmap + network enumeration (Week 7)
 
 ## 📚 Learning Path
 
@@ -91,16 +92,18 @@ HTTP:
 - **Active recall passed:** explained that `tls` can show handshake packets as well as application-data packets; distinguished protocol filtering from TCP port filtering
 - **Result:** completed practical filters, Follow TCP Stream, Endpoints, Conversations, and evidence notes
 
-## 🟡 Day 42 — Mini SOC Wireshark Investigation (in progress)
+## Day 42 ✅ Complete — Mini SOC Wireshark Investigation
 - Week 6 day file: [`week-6/day-42-wireshark-investigation.md`](week-6/day-42-wireshark-investigation.md)
 - Full investigation report: [`investigations/day42-wireshark-investigation.md`](investigations/day42-wireshark-investigation.md)
-- Generated 20 local TCP connection attempts to `127.0.0.1:9999` on loopback `lo`
-- Confirmed 20 initial SYN packets and 20 RST responses; 40 packets matched `tcp.port == 9999`
-- **Pending:** final theory test and remaining practical checklist
+- Controlled localhost lab: 20 initial SYN packets and 20 RST responses; 40 packets matched `tcp.port == 9999` in a 52-packet capture
+- Verified DNS query/response, TCP three-way handshake, UDP/QUIC traffic, local HTTP GET/200 OK, and TLS Client Hello/Server Hello across separate captures
+- Reused documented Day 41 evidence for Endpoints, Conversations and Follow TCP Stream
+- Theory test: **7.75/10**; passed with targeted correction of endpoint/conversation terminology
+- **Week 6 practical checklist completed across multiple captures**; see the day file and full investigation report
 
 ## 🎯 Next
 
-**Finish Day 42 theory/practical review before marking complete**
+**Day 43 — Nmap + network enumeration (Week 7)**
 
 ## 🧪 Study Method
 **Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
