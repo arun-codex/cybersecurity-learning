@@ -200,8 +200,33 @@ Full review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md).
 - [ ] Write one short enumeration report with evidence, interpretation, unknowns and next steps.
 - [ ] Aim for **4/5 or better** on active recall for each main topic.
 
+## 📘 Week 7 — Nmap + Network Enumeration
+
+**Status: Planned / not started — keep all tasks unchecked until demonstrated.**  
+**Theory baseline:** Day 42 = 7.75/10.  
+**Environment:** Fedora Linux; scan only localhost, an owned VM, or an explicitly authorized target.
+
+Full Days 43–49 plan: [`week-7/week-7-nmap-network-enumeration.md`](week-7/week-7-nmap-network-enumeration.md).  
+Week 6 review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md).
+
+### Carry-forward improvements from Week 6
+- Use precise terms: endpoint vs. conversation, FIN vs. RST.
+- Read the exact selected packet's own fields before summarizing related packets.
+- Separate observation, interpretation, uncertainty, verification and next action.
+- Record exact commands, actual output, target/scope and time range; never invent results.
+- Practise closed-notes recall and compare against the 7.75/10 baseline.
+
+### Week 7 objectives (planned, all pending)
+- [ ] Nmap purpose and first localhost scan (Day 43)
+- [ ] Host discovery and authorized target scope (Day 44)
+- [ ] Open, closed and filtered port states (Day 45)
+- [ ] Basic scans, service/version detection and saved output (Day 46)
+- [ ] Review port/service/TCP states and compare Nmap with `ss` (Day 47)
+- [ ] Controlled enumeration lab and optional Wireshark correlation (Day 48)
+- [ ] Closed-notes assessment and final enumeration report (Day 49)
+
 ### Current next step
-**Day 43 — Nmap host discovery and fundamentals (Week 7).**
+**Day 43 — Nmap installation, purpose + first localhost scan.**
 
 ## 🧠 Analyst mindset
 
