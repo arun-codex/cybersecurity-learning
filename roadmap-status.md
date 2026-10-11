@@ -175,8 +175,33 @@ Week 6 day file: [`week-6/day-42-wireshark-investigation.md`](week-6/day-42-wire
 
 Full investigation report: [`investigations/day42-wireshark-investigation.md`](investigations/day42-wireshark-investigation.md).
 
+## 🧭 Week 6 Retrospective — Me vs. Me
+
+**Status: ✅ Week 6 goals completed across the daily labs and multiple captures.**
+
+Full review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md).
+
+### What went well
+- Used practical captures and display filters instead of relying only on videos.
+- Connected packet observations to streams, endpoints, conversations and a written SOC-style investigation.
+- Treated the repeated SYN/RST pattern as a known, intentionally generated local test rather than proof of an attack.
+
+### Improvement points for Week 7
+- **Technical precision:** review endpoint vs. conversation, RST vs. FIN, and the full SYN → SYN/ACK → ACK sequence.
+- **Packet-by-packet reading:** identify the selected packet's exact DNS query type, source/destination and ports before summarizing related packets.
+- **Evidence quality:** save lab outputs and record target/scope, command/filter, counts and time range; clearly separate observation, interpretation, uncertainty and next check.
+- **Active recall:** Week 6 theory baseline was **7.75/10**. Begin Week 7 with a short closed-notes review of the missed concepts.
+
+### Week 7 — measurable “me vs. me” targets
+- [ ] Complete at least 3 Nmap exercises on my own machine, own VM or an explicitly authorized lab.
+- [ ] Explain open vs. closed vs. filtered from actual scan results.
+- [ ] Record target/scope, exact command, output and timestamp for each exercise.
+- [ ] Correlate at least one scan result with locally observed listening services when possible.
+- [ ] Write one short enumeration report with evidence, interpretation, unknowns and next steps.
+- [ ] Aim for **4/5 or better** on active recall for each main topic.
+
 ### Current next step
-**Day 43 — Nmap + network enumeration (Week 7).**
+**Day 43 — Nmap host discovery and fundamentals (Week 7).**
 
 ## 🧠 Analyst mindset
 
