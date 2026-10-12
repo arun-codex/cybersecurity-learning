@@ -1,53 +1,52 @@
 # GitHub Achievement Roadmap
 
 **Owner:** [@arun-codex](https://github.com/arun-codex)  
-**Purpose:** Earn currently available GitHub profile achievements through real development, collaboration, and community participation.  
-**Status:** Updated 2026-10-12. Actions below are verified from GitHub records; badge awards must still be confirmed on the profile.
+**Updated:** 2026-10-12  
+**Goal:** Earn every achievement that is currently available and realistically obtainable, through legitimate development and community participation.
 
 ## Integrity rules
 
-- Never manufacture learning activity or pretend uncompleted work happened.
-- Do not spam repositories, issues, pull requests, or Discussions.
-- Do not fabricate co-authorship, trade stars, or bypass required branch protections.
-- Sponsorship is optional and only if it fits the budget.
-- GitHub may change eligibility or thresholds; check each badge on the profile after the qualifying event.
+- Do not manufacture study activity or present uncompleted work as real.
+- Do not spam issues, pull requests, Discussions, or stars.
+- Do not fabricate co-authorship, trade stars, or bypass required protections.
+- Sponsorship is optional and must never happen without an intentional budget decision.
+- Mark a badge as earned only after it is visible on the profile.
 
 ## Achievement tracker
 
-| Achievement | Qualifying activity | Status | Evidence / next step |
-|---|---|---|---|
-| Quickdraw | Close an issue or PR within 5 minutes of opening | Action completed; badge unverified | [Test issue #2](https://github.com/arun-codex/cybersecurity-learning/issues/2), created 11:35:56Z and closed 11:36:00Z. Check profile. |
-| Pull Shark | Have at least 2 pull requests merged | Action completed; badge unverified | [C learning PR #1](https://github.com/arun-codex/c-learning-project/pull/1), [portfolio PR #2](https://github.com/arun-codex/portfolio/pull/2). Check profile. |
-| YOLO | Merge a pull request without review | Pending | Only use for a small, safe change in a repository you control and only when no review/check is required. |
-| Pair Extraordinaire | Be co-author on a merged PR | Needs real collaborator | Pair with a collaborator; use correct co-author attribution for genuinely joint work. |
-| Galaxy Brain | Have answers accepted in eligible public repository Discussions | Pending | Answer real questions; two accepted answers are the usual initial threshold. GitHub Community Discussions no longer award it. |
-| Starstruck | A repository you own reaches the required genuine star threshold | Pending | Improve one flagship project and grow authentic usage; no star exchanges or spam. Initial threshold commonly reported as 16 stars. |
-| Public Sponsor | Publicly sponsor eligible open-source work | Optional | Only if financially comfortable and eligible sponsorship is available. |
-| Heart on Your Sleeve | React with ❤️ to a GitHub item | Availability to verify | The current earning status may vary; check profile / official UI. |
-| Open Sourcerer | Qualifying merged PRs across multiple public repositories | Availability to verify | Older references list this badge, but recent sources disagree on its current earnability. Verify before spending effort. |
+| Achievement | Status | Evidence / next step |
+|---|---|---|
+| Quickdraw | **Earned — profile screenshot confirmed** | [Test issue #2](https://github.com/arun-codex/cybersecurity-learning/issues/2) was closed four seconds after creation. |
+| YOLO | **Earned — profile screenshot confirmed** | Confirmed visible in the user's profile screenshot on 2026-10-12. |
+| Pair Extraordinaire | **Earned — profile screenshot confirmed** | Confirmed visible in the user's profile screenshot on 2026-10-12. |
+| Pull Shark | **Earned — profile screenshot confirmed** | [C project PR #1](https://github.com/arun-codex/c-learning-project/pull/1) and [portfolio PR #2](https://github.com/arun-codex/portfolio/pull/2) are merged. |
+| Galaxy Brain | Pending; needs an accepted answer | Give a substantive answer in an eligible public repository's Discussions; an external maintainer or question owner generally must accept it. GitHub Community Discussions no longer award achievements for new participation. |
+| Starstruck | Next growth target | Grow a genuinely useful repository to the first star threshold (commonly 16 stars). No star trading or spam. |
+| Public Sponsor | Optional; not attempted | Requires a public sponsorship of eligible work. Do not spend money without a deliberate budget decision. |
+| Heart on Your Sleeve | Not currently a dependable target | GitHub stated that its March 2026 reappearance was an error and removed it again: https://github.com/orgs/community/discussions/70518 |
+| Open Sourcerer | Not currently a dependable target | GitHub stated that its March 2026 reappearance was an error and removed it again: https://github.com/orgs/community/discussions/70518 |
+| Arctic Code Vault / Mars 2020 | Legacy / closed event | Not available to earn through new activity. |
 
-## Completed actions on 2026-10-12
+## Verified work completed on 2026-10-12
 
-- Created a master tracking issue: [Achievement plan #1](https://github.com/arun-codex/cybersecurity-learning/issues/1).
-- Merged a contribution guide to the C learning project: [PR #1](https://github.com/arun-codex/c-learning-project/pull/1).
-- Merged a contribution guide to the portfolio repository: [PR #2](https://github.com/arun-codex/portfolio/pull/2).
-- Opened and closed a labelled Quickdraw test issue in approximately four seconds: [issue #2](https://github.com/arun-codex/cybersecurity-learning/issues/2).
-- Merged a documentation record of the Quickdraw test: [PR #3](https://github.com/arun-codex/cybersecurity-learning/pull/3).
+- Created a master tracker: [Achievement issue #1](https://github.com/arun-codex/cybersecurity-learning/issues/1).
+- Merged [C-learning contribution guide PR #1](https://github.com/arun-codex/c-learning-project/pull/1).
+- Merged [portfolio contribution guide PR #2](https://github.com/arun-codex/portfolio/pull/2).
+- Opened and closed [Quickdraw test issue #2](https://github.com/arun-codex/cybersecurity-learning/issues/2) in about four seconds.
+- Merged [Quickdraw smoke-test record PR #3](https://github.com/arun-codex/cybersecurity-learning/pull/3).
+- Prepared an offline SSH authentication log triage utility with unit tests and CI. Its current feature branch is awaiting review/merge: [feature branch](https://github.com/arun-codex/cybersecurity-learning/tree/feat/ssh-auth-log-triage).
 
-## Next actions
+## Next steps
 
-1. Manually verify Quickdraw and Pull Shark in the Achievements section of the [GitHub profile](https://github.com/arun-codex?tab=achievements).
-2. Make one safe, useful unreviewed PR if pursuing YOLO is appropriate.
-3. Contribute a substantive fix to an unrelated public upstream project.
-4. Arrange a real paired contribution with a collaborator.
-5. Answer genuine, unanswered questions in public repository Discussions.
-6. Improve a flagship repository's documentation, demo and usefulness to attract genuine users and stars.
+1. Review and merge the SSH authentication log triage tool if the pull request checks and code review look good.
+2. Share the tool with relevant learners and practitioners; stars must be earned organically.
+3. Contribute a substantive answer in an eligible public repository Discussion and wait for acceptance for Galaxy Brain.
+4. Recheck the profile after each qualifying event.
+5. Consider Public Sponsor only if sponsorship is something you independently want and can afford.
 
 ## Review log
 
-Only mark a badge **Earned** after it is visible on the profile.
-
 - Date: 2026-10-12
-- Work: two PRs merged across public repositories; Quickdraw test issue closed within five minutes.
-- Badge confirmation: pending manual profile check.
-- Next review: after profile check and next legitimate contribution.
+- Profile-confirmed badges: Quickdraw, YOLO, Pair Extraordinaire, Pull Shark.
+- Remaining feasible badges to pursue: Galaxy Brain, Starstruck; Public Sponsor is optional.
+- Do not mark a badge earned until it appears on the profile.
