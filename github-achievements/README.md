@@ -2,45 +2,52 @@
 
 **Owner:** [@arun-codex](https://github.com/arun-codex)  
 **Purpose:** Earn currently available GitHub profile achievements through real development, collaboration, and community participation.  
-**Status:** Plan created 2026-10-12. Badges must be verified on the profile before being marked earned.
+**Status:** Updated 2026-10-12. Actions below are verified from GitHub records; badge awards must still be confirmed on the profile.
 
-## Safety and integrity rules
+## Integrity rules
 
-- Do not manufacture learning activity or pretend uncompleted work happened.
+- Never manufacture learning activity or pretend uncompleted work happened.
 - Do not spam repositories, issues, pull requests, or Discussions.
 - Do not fabricate co-authorship, trade stars, or bypass required branch protections.
-- Only sponsor projects if doing so fits the budget; sponsorship is optional.
-- GitHub may change eligibility or thresholds, so check each badge on the profile after the qualifying event.
+- Sponsorship is optional and only if it fits the budget.
+- GitHub may change eligibility or thresholds; check each badge on the profile after the qualifying event.
 
 ## Achievement tracker
 
-| Achievement | Qualifying activity | Plan | Status |
+| Achievement | Qualifying activity | Status | Evidence / next step |
 |---|---|---|---|
-| Quickdraw | Close an issue or PR within 5 minutes of opening | Close a clearly-labelled test issue after checking it is safe to close | Pending |
-| Pull Shark | Have pull requests merged | Make useful changes to own project(s) and/or upstream projects; aim for 2 meaningful merged PRs first | Pending |
-| YOLO | Merge a PR without review | Use only for a small, safe change in a repository you control, and only when no review/check is required | Pending |
-| Pair Extraordinaire | Be a co-author on a merged PR | Pair with a real collaborator and use accurate co-author attribution for jointly-authored work | Pending |
-| Galaxy Brain | Have answers accepted in eligible public Discussions | Provide substantive answers to real questions in repositories that enable Discussions; verify current eligibility first | Pending / availability to verify |
-| Starstruck | A repository you own reaches the required genuine star threshold | Improve documentation, demo, screenshots, usefulness and discoverability; no star exchanges or solicitation spam | Pending |
-| Public Sponsor | Publicly sponsor eligible open-source work | Optional only if affordable and an eligible sponsorship is available | Optional |
-| Heart on Your Sleeve | React with ❤️ to a GitHub item | Use a genuine, relevant reaction if the badge is offered to this account | Pending / availability to verify |
-| Open Sourcerer | Qualifying merged PRs across multiple public repositories | Contribute useful, accepted changes to upstream projects; first verify whether this achievement is currently earnable | Pending / availability to verify |
+| Quickdraw | Close an issue or PR within 5 minutes of opening | Action completed; badge unverified | [Test issue #2](https://github.com/arun-codex/cybersecurity-learning/issues/2), created 11:35:56Z and closed 11:36:00Z. Check profile. |
+| Pull Shark | Have at least 2 pull requests merged | Action completed; badge unverified | [C learning PR #1](https://github.com/arun-codex/c-learning-project/pull/1), [portfolio PR #2](https://github.com/arun-codex/portfolio/pull/2). Check profile. |
+| YOLO | Merge a pull request without review | Pending | Only use for a small, safe change in a repository you control and only when no review/check is required. |
+| Pair Extraordinaire | Be co-author on a merged PR | Needs real collaborator | Pair with a collaborator; use correct co-author attribution for genuinely joint work. |
+| Galaxy Brain | Have answers accepted in eligible public repository Discussions | Pending | Answer real questions; two accepted answers are the usual initial threshold. GitHub Community Discussions no longer award it. |
+| Starstruck | A repository you own reaches the required genuine star threshold | Pending | Improve one flagship project and grow authentic usage; no star exchanges or spam. Initial threshold commonly reported as 16 stars. |
+| Public Sponsor | Publicly sponsor eligible open-source work | Optional | Only if financially comfortable and eligible sponsorship is available. |
+| Heart on Your Sleeve | React with ❤️ to a GitHub item | Availability to verify | The current earning status may vary; check profile / official UI. |
+| Open Sourcerer | Qualifying merged PRs across multiple public repositories | Availability to verify | Older references list this badge, but recent sources disagree on its current earnability. Verify before spending effort. |
 
-## First priorities
+## Completed actions on 2026-10-12
 
-1. Confirm available achievements in the GitHub profile UI.
-2. Close a labelled test issue within five minutes if issue creation/closing is available.
-3. Identify a small real fix in a project and merge a useful PR.
-4. Find an appropriate upstream issue and contribute a focused fix or documentation improvement.
-5. Ask a collaborator to pair on a genuine contribution.
-6. Improve one flagship repository to attract real users and stars.
+- Created a master tracking issue: [Achievement plan #1](https://github.com/arun-codex/cybersecurity-learning/issues/1).
+- Merged a contribution guide to the C learning project: [PR #1](https://github.com/arun-codex/c-learning-project/pull/1).
+- Merged a contribution guide to the portfolio repository: [PR #2](https://github.com/arun-codex/portfolio/pull/2).
+- Opened and closed a labelled Quickdraw test issue in approximately four seconds: [issue #2](https://github.com/arun-codex/cybersecurity-learning/issues/2).
+- Merged a documentation record of the Quickdraw test: [PR #3](https://github.com/arun-codex/cybersecurity-learning/pull/3).
 
-## Weekly review
+## Next actions
 
-Record only verified achievements and qualifying work. Never count a planned action as complete.
+1. Manually verify Quickdraw and Pull Shark in the Achievements section of the [GitHub profile](https://github.com/arun-codex?tab=achievements).
+2. Make one safe, useful unreviewed PR if pursuing YOLO is appropriate.
+3. Contribute a substantive fix to an unrelated public upstream project.
+4. Arrange a real paired contribution with a collaborator.
+5. Answer genuine, unanswered questions in public repository Discussions.
+6. Improve a flagship repository's documentation, demo and usefulness to attract genuine users and stars.
 
-- Date:
-- Work actually completed:
-- PR / issue / discussion links:
-- Badge confirmed on profile:
-- Next real contribution:
+## Review log
+
+Only mark a badge **Earned** after it is visible on the profile.
+
+- Date: 2026-10-12
+- Work: two PRs merged across public repositories; Quickdraw test issue closed within five minutes.
+- Badge confirmation: pending manual profile check.
+- Next review: after profile check and next legitimate contribution.
