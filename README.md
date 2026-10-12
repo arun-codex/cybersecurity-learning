@@ -2,6 +2,10 @@
 
 My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / Blue Team, security analysis, and practical labs.
 
+## 🛠️ Practical SOC Tooling
+
+- [SSH Authentication Log Triage](tools/ssh-log-triage/README.md) — offline Python utility to group failed SSH logins, record accepted logins, flag repeated failures, emit JSON reports, and run unit tests. Uses sanitized sample logs; no network requests or automatic blocking.
+
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Progress:** **Days 1–42 ✅ Complete**
