@@ -34,15 +34,14 @@
 - Merged [portfolio contribution guide PR #2](https://github.com/arun-codex/portfolio/pull/2).
 - Opened and closed [Quickdraw test issue #2](https://github.com/arun-codex/cybersecurity-learning/issues/2) in about four seconds.
 - Merged [Quickdraw smoke-test record PR #3](https://github.com/arun-codex/cybersecurity-learning/pull/3).
-- Prepared an offline SSH authentication log triage utility with unit tests and CI. Its current feature branch is awaiting review/merge: [feature branch](https://github.com/arun-codex/cybersecurity-learning/tree/feat/ssh-auth-log-triage).
+- Merged the offline SSH authentication log triage utility, sanitized sample logs, four unit tests, and GitHub Actions workflow: [PR #4](https://github.com/arun-codex/cybersecurity-learning/pull/4). Local tests and GitHub Actions both passed.
 
 ## Next steps
 
-1. Review and merge the SSH authentication log triage tool if the pull request checks and code review look good.
-2. Share the tool with relevant learners and practitioners; stars must be earned organically.
-3. Contribute a substantive answer in an eligible public repository Discussion and wait for acceptance for Galaxy Brain.
-4. Recheck the profile after each qualifying event.
-5. Consider Public Sponsor only if sponsorship is something you independently want and can afford.
+1. Publish and share the SSH authentication log triage tool with relevant learners and practitioners; stars must be earned organically.
+2. Contribute a substantive answer in an eligible public repository Discussion and wait for acceptance for Galaxy Brain.
+3. Recheck the profile after each qualifying event.
+4. Consider Public Sponsor only if sponsorship is something you independently want and can afford.
 
 ## Review log
 
