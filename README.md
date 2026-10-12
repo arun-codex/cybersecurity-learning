@@ -8,12 +8,12 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
-- **Progress:** **Days 1–42 ✅ Complete**
+- **Progress:** **Days 1–43 ✅ Complete**
 - **Latest completed milestone:** Week 6 — Wireshark
-- **Current week:** Week 7 — Nmap + Network Enumeration (planned; Day 43 not yet complete)
+- **Current week:** Week 7 — Nmap + Network Enumeration (in progress; Day 43 complete, Day 44 pending)
 - **Full plan:** [Week 7 Days 43–49](week-7/week-7-nmap-network-enumeration.md)
 - **Previous-week review:** [Week 6 retrospective — Me vs. Me](week-6/week-6-retrospective.md)
-- **Next:** Day 43 — Nmap installation, purpose + first localhost scan
+- **Next:** Day 44 — Host discovery + authorized target scope
 
 ## 📚 Learning Path
 
@@ -110,16 +110,26 @@ HTTP:
 
 ## 🧭 Week 7 — Nmap + Network Enumeration
 
-**Status: Planned — tasks remain unchecked until demonstrated with actual commands, outputs and explanations.**
+**Status: In progress — Day 43 ✅ complete; Days 44–49 pending.**
 
 - [Full Days 43–49 plan](week-7/week-7-nmap-network-enumeration.md)
+- [Day 43 — First Nmap scan and evidence log](week-7/day-43-first-scan.md)
 - [Week 6 retrospective and feedback](week-6/week-6-retrospective.md)
 - Previous-week theory baseline: **7.75/10**
 - Carry-forward focus: precise terminology (endpoint vs. conversation; FIN vs. RST), reading the exact selected packet, separating observation from interpretation, documenting limitations, and independent recall.
 
+### Day 43 ✅ Complete — First localhost scan
+
+- Verified Nmap 7.92 was already installed on Fedora.
+- First scan at 06:26 IST showed `631/tcp` and `8000/tcp` open.
+- A later targeted scan showed ports 22, 80, 443, 8000 and 9999 closed; a later full scan showed `631/tcp` open.
+- Compared Nmap with `ss -lnt` and `ss -lnu`; the TCP listener at `127.0.0.1:631` corroborated the open-port observation.
+- The cause of port 8000's changed state remains unknown; no cause was invented.
+- Active recall was completed with guided correction. Revisit observation vs. inference and TCP vs. UDP during review.
+
 ## 🎯 Next
 
-**Day 43 — Nmap installation, purpose + first localhost scan**
+**Day 44 — Host discovery + authorized target scope**
 
 ## 🧪 Study Method
 **Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
