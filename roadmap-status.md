@@ -202,7 +202,7 @@ Full review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md).
 
 ## 📘 Week 7 — Nmap + Network Enumeration
 
-**Status: Planned / not started — keep all tasks unchecked until demonstrated.**  
+**Status: In progress — Day 43 completed from actual terminal evidence; Days 44–49 remain pending.**  
 **Theory baseline:** Day 42 = 7.75/10.  
 **Environment:** Fedora Linux; scan only localhost, an owned VM, or an explicitly authorized target.
 
@@ -217,7 +217,7 @@ Week 6 review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md
 - Practise closed-notes recall and compare against the 7.75/10 baseline.
 
 ### Week 7 objectives (planned, all pending)
-- [ ] Nmap purpose and first localhost scan (Day 43)
+- [x] Nmap purpose and first localhost scan (Day 43)
 - [ ] Host discovery and authorized target scope (Day 44)
 - [ ] Open, closed and filtered port states (Day 45)
 - [ ] Basic scans, service/version detection and saved output (Day 46)
@@ -225,8 +225,19 @@ Week 6 review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md
 - [ ] Controlled enumeration lab and optional Wireshark correlation (Day 48)
 - [ ] Closed-notes assessment and final enumeration report (Day 49)
 
+### Day 43 — First Nmap scan (completed)
+
+Evidence log: [`week-7/day-43-first-scan.md`](week-7/day-43-first-scan.md).
+
+- Nmap 7.92 was already installed.
+- First localhost scan (06:26 IST): `631/tcp` and `8000/tcp` open.
+- Targeted scan (06:36 IST): ports 22, 80, 443, 8000 and 9999 closed.
+- Later full scan: `631/tcp` open; `ss -lnt` also showed `127.0.0.1:631` and `[::1]:631` in `LISTEN`.
+- Port 8000's state changed between scans; the cause is unknown.
+- Active recall was completed after guided correction; revisit evidence vs. inference and TCP vs. UDP.
+
 ### Current next step
-**Day 43 — Nmap installation, purpose + first localhost scan.**
+**Day 44 — Host discovery and authorized target scope.**
 
 ## 🧠 Analyst mindset
 
