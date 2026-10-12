@@ -14,10 +14,10 @@ A small, offline Python utility for learning how a SOC analyst can triage common
 
 Requires Python 3.10+.
 
-\`\`\`bash
+~~~bash
 python3 ssh_log_triage.py sample-auth.log --threshold 3
 python3 ssh_log_triage.py sample-auth.log --threshold 3 --output report.json
-\`\`\`
+~~~
 
 On Fedora, the system authentication log is commonly /var/log/secure; on Debian/Ubuntu it is commonly /var/log/auth.log. Read permission may be required. Start with the included sanitized sample before analyzing a real log.
 
@@ -25,9 +25,9 @@ On Fedora, the system authentication log is commonly /var/log/secure; on Debian/
 
 From this directory:
 
-\`\`\`bash
+~~~bash
 python3 -m unittest -v
-\`\`\`
+~~~
 
 ## Analyst cautions
 
