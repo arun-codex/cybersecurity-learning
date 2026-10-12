@@ -1,6 +1,0 @@
-Oct 12 01:00:00 lab-host sshd[100]: Failed password for root from 192.0.2.10 port 51222 ssh2
-Oct 12 01:00:01 lab-host sshd[101]: Failed password for root from 192.0.2.10 port 51223 ssh2
-Oct 12 01:00:02 lab-host sshd[102]: Failed password for invalid user guest from 192.0.2.10 port 51224 ssh2
-Oct 12 01:00:02 lab-host sshd[102]: Invalid user guest from 192.0.2.10 port 51224
-Oct 12 01:01:00 lab-host sshd[103]: Accepted publickey for arun from 2001:db8::1 port 44000 ssh2
-Oct 12 01:02:00 lab-host CRON[555]: unrelated service event
