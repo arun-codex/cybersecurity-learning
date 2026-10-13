@@ -8,12 +8,12 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
-- **Progress:** **Days 1–43 ✅ Complete**
+- **Progress:** **Days 1–44 ✅ Complete**
 - **Latest completed milestone:** Week 6 — Wireshark
-- **Current week:** Week 7 — Nmap + Network Enumeration (in progress; Day 43 complete, Day 44 pending)
+- **Current week:** Week 7 — Nmap + Network Enumeration (in progress; Days 43–44 complete, Day 45 pending)
 - **Full plan:** [Week 7 Days 43–49](week-7/week-7-nmap-network-enumeration.md)
 - **Previous-week review:** [Week 6 retrospective — Me vs. Me](week-6/week-6-retrospective.md)
-- **Next:** Day 44 — Host discovery + authorized target scope
+- **Next:** Day 45 — Open, closed and filtered port states
 
 ## 📚 Learning Path
 
@@ -114,6 +114,7 @@ HTTP:
 
 - [Full Days 43–49 plan](week-7/week-7-nmap-network-enumeration.md)
 - [Day 43 — First Nmap scan and evidence log](week-7/day-43-first-scan.md)
+- [Day 44 — Host discovery and target scope](week-7/day-44-host-discovery.md)
 - [Week 6 retrospective and feedback](week-6/week-6-retrospective.md)
 - Previous-week theory baseline: **7.75/10**
 - Carry-forward focus: precise terminology (endpoint vs. conversation; FIN vs. RST), reading the exact selected packet, separating observation from interpretation, documenting limitations, and independent recall.
@@ -127,9 +128,16 @@ HTTP:
 - The cause of port 8000's changed state remains unknown; no cause was invented.
 - Active recall was completed with guided correction. Revisit observation vs. inference and TCP vs. UDP during review.
 
+### Day 44 ✅ Complete — Host discovery
+
+- Inspected local interfaces and routes; local IP addresses, MAC address and gateway details are omitted from the public note.
+- Ran `nmap -sn 127.0.0.1`; Nmap reported localhost up (one host, 0.03 seconds) and showed no normal port table.
+- Distinguished host discovery from a normal scan, understood that no response does not prove offline, and reviewed why target IP and authorization must be verified.
+- Active recall required guided correction; revisit `-sn` vs. a normal scan in the next review.
+
 ## 🎯 Next
 
-**Day 44 — Host discovery + authorized target scope**
+**Day 45 — Open, closed and filtered port states**
 
 ## 🧪 Study Method
 **Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
