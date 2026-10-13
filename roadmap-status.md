@@ -1,6 +1,6 @@
 # 🗺️ Roadmap Status
 
-## ✅ Completed through Day 42
+## ✅ Completed through Day 44
 
 ### Week 1 — Networking
 OSI, TCP/IP, IPv4/subnetting, ports.
@@ -202,7 +202,7 @@ Full review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md).
 
 ## 📘 Week 7 — Nmap + Network Enumeration
 
-**Status: In progress — Day 43 completed from actual terminal evidence; Days 44–49 remain pending.**  
+**Status: In progress — Days 43–44 completed from actual terminal evidence; Days 45–49 remain pending.**  
 **Theory baseline:** Day 42 = 7.75/10.  
 **Environment:** Fedora Linux; scan only localhost, an owned VM, or an explicitly authorized target.
 
@@ -218,7 +218,7 @@ Week 6 review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md
 
 ### Week 7 objectives (planned, all pending)
 - [x] Nmap purpose and first localhost scan (Day 43)
-- [ ] Host discovery and authorized target scope (Day 44)
+- [x] Host discovery and authorized target scope (Day 44)
 - [ ] Open, closed and filtered port states (Day 45)
 - [ ] Basic scans, service/version detection and saved output (Day 46)
 - [ ] Review port/service/TCP states and compare Nmap with `ss` (Day 47)
@@ -236,8 +236,17 @@ Evidence log: [`week-7/day-43-first-scan.md`](week-7/day-43-first-scan.md).
 - Port 8000's state changed between scans; the cause is unknown.
 - Active recall was completed after guided correction; revisit evidence vs. inference and TCP vs. UDP.
 
+### Day 44 — Host discovery and target scope (completed)
+
+Evidence log: [`week-7/day-44-host-discovery.md`](week-7/day-44-host-discovery.md).
+
+- Inspected local interface and route state; unnecessary local addressing was excluded from the public note.
+- Ran `nmap -sn 127.0.0.1`; Nmap reported localhost up, one host, 0.03 seconds, with no normal port table.
+- Reviewed host discovery vs. port scanning, target verification, and why no response is inconclusive.
+- Active recall was completed with guided correction; revisit `-sn` vs. a normal scan.
+
 ### Current next step
-**Day 44 — Host discovery and authorized target scope.**
+**Day 45 — Port states: open, closed and filtered.**
 
 ## 🧠 Analyst mindset
 
