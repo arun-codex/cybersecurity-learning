@@ -219,7 +219,7 @@ Week 6 review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md
 ### Week 7 objectives (planned, all pending)
 - [x] Nmap purpose and first localhost scan (Day 43)
 - [x] Host discovery and authorized target scope (Day 44)
-- [ ] Open, closed and filtered port states (Day 45)
+- [ ] Open, closed and filtered port states (Day 45 — scans recorded; review pending)
 - [ ] Basic scans, service/version detection and saved output (Day 46)
 - [ ] Review port/service/TCP states and compare Nmap with `ss` (Day 47)
 - [ ] Controlled enumeration lab and optional Wireshark correlation (Day 48)
@@ -245,8 +245,17 @@ Evidence log: [`week-7/day-44-host-discovery.md`](week-7/day-44-host-discovery.m
 - Reviewed host discovery vs. port scanning, target verification, and why no response is inconclusive.
 - Active recall was completed with guided correction; revisit `-sn` vs. a normal scan.
 
+### Day 45 — Port states and TCP reasoning (in progress)
+
+Evidence log: [`week-7/day-45-port-states.md`](week-7/day-45-port-states.md).
+
+- `nmap -p 8000 127.0.0.1` at 23:24 IST reported `8000/tcp open` during the server-running phase.
+- `nmap -p 9999 127.0.0.1` at 23:25 IST reported `9999/tcp closed`.
+- After the local server was stopped, `nmap -p 8000 127.0.0.1` at 23:26 IST reported `8000/tcp closed`.
+- Controlled scan comparison is documented. Evidence-vs-inference and final active recall still need completion, so Day 45 is not yet marked complete.
+
 ### Current next step
-**Day 45 — Port states: open, closed and filtered.**
+**Finish Day 45 recall and evidence-vs-inference review.**
 
 ## 🧠 Analyst mindset
 
