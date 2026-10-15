@@ -10,7 +10,7 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 - **Target:** Cybersecurity / SOC / Blue Team internship
 - **Progress:** **Days 1–44 ✅ Complete**
 - **Latest completed milestone:** Week 6 — Wireshark
-- **Current week:** Week 7 — Nmap + Network Enumeration (in progress; Days 43–44 complete, Day 45 pending)
+- **Current week:** Week 7 — Nmap + Network Enumeration (in progress; Days 43–44 complete, Day 45 practical scans done, recall pending)
 - **Full plan:** [Week 7 Days 43–49](week-7/week-7-nmap-network-enumeration.md)
 - **Previous-week review:** [Week 6 retrospective — Me vs. Me](week-6/week-6-retrospective.md)
 - **Next:** Day 45 — Open, closed and filtered port states
@@ -115,6 +115,7 @@ HTTP:
 - [Full Days 43–49 plan](week-7/week-7-nmap-network-enumeration.md)
 - [Day 43 — First Nmap scan and evidence log](week-7/day-43-first-scan.md)
 - [Day 44 — Host discovery and target scope](week-7/day-44-host-discovery.md)
+- [Day 45 — Port states and TCP reasoning](week-7/day-45-port-states.md)
 - [Week 6 retrospective and feedback](week-6/week-6-retrospective.md)
 - Previous-week theory baseline: **7.75/10**
 - Carry-forward focus: precise terminology (endpoint vs. conversation; FIN vs. RST), reading the exact selected packet, separating observation from interpretation, documenting limitations, and independent recall.
@@ -135,9 +136,16 @@ HTTP:
 - Distinguished host discovery from a normal scan, understood that no response does not prove offline, and reviewed why target IP and authorization must be verified.
 - Active recall required guided correction; revisit `-sn` vs. a normal scan in the next review.
 
+### Day 45 — Port states (practical scans complete; review pending)
+
+- Local scan at 23:24 IST: `8000/tcp open` during the server-running phase.
+- Local scan at 23:25 IST: `9999/tcp closed`.
+- After stopping the server, local scan at 23:26 IST: `8000/tcp closed`.
+- Observed states were saved in [Day 45 evidence notes](week-7/day-45-port-states.md). Evidence-vs-inference and final active recall remain pending.
+
 ## 🎯 Next
 
-**Day 45 — Open, closed and filtered port states**
+**Finish Day 45 recall and evidence-vs-inference review**
 
 ## 🧪 Study Method
 **Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
