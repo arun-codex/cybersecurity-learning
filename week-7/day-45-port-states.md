@@ -1,6 +1,6 @@
 # Day 45 — Port States + TCP Connection Reasoning
 
-**Status:** In progress — controlled local scans completed; evidence-vs-inference write-up and final active recall remain.  
+**Status:** Complete — controlled local scans, evidence-vs-inference exercise, and final active recall completed with guided correction.  
 **Evidence timestamp:** Terminal output dated 2026-10-15, 23:24–23:26 IST.  
 **Environment:** Fedora Linux; Nmap 7.92.  
 **Target/scope:** Own machine only, loopback target `127.0.0.1`.
@@ -116,9 +116,15 @@ TCP connection reasoning reminder: SYN → SYN/ACK → ACK establishes a normal 
 - [x] Test an open local port during the server-running phase
 - [x] Compare it with a port reported closed
 - [x] Stop the test server and observe TCP/8000 become closed
-- [ ] Independently explain all three primary states without notes
-- [ ] Complete the evidence-vs-inference write-up and final active recall
+- [x] Explain all three primary states during active recall (with guidance on the network-perspective question)
+- [x] Complete the evidence-vs-inference write-up and final active recall
+
+## Review notes
+
+- Active recall correctly identified open, closed and filtered states, and that an open port alone does not prove a vulnerability.
+- The network-perspective question required an explanation and retry: firewall rules or network paths can make the same service appear different from different vantage points.
+- RST vs. FIN was reviewed. Revisit these distinctions in later closed-notes practice rather than treating guided answers as independent mastery.
 
 ## Next
 
-Finish the active-recall questions and evidence-vs-inference exercise, then update the completion status. Day 46 follows only after Day 45 review is complete.
+**Day 46 — Basic scans, service/version detection and saved output.**
