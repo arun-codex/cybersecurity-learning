@@ -155,7 +155,7 @@ HTTP:
 
 ## 🎯 Next
 
-**Day 46 — Service/version detection + saved scan output**
+**Day 47 — Light review of ports, services and TCP states**
 
 ## 🧪 Study Method
 **Goal → prerequisites → needle movers → brief learning → practice → active recall → document**
