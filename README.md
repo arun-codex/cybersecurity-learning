@@ -8,12 +8,12 @@ My hands-on cybersecurity learning journey focused on Networking, Linux, SOC / B
 
 ## 🎯 Current Goal
 - **Target:** Cybersecurity / SOC / Blue Team internship
-- **Progress:** **Days 1–45 ✅ Complete**
+- **Progress:** **Days 1–46 ✅ Complete**
 - **Latest completed milestone:** Week 6 — Wireshark
-- **Current week:** Week 7 — Nmap + Network Enumeration (in progress; Days 43–45 complete, Day 46 pending)
+- **Current week:** Week 7 — Nmap + Network Enumeration (in progress; Days 43–46 complete, Day 47 pending)
 - **Full plan:** [Week 7 Days 43–49](week-7/week-7-nmap-network-enumeration.md)
 - **Previous-week review:** [Week 6 retrospective — Me vs. Me](week-6/week-6-retrospective.md)
-- **Next:** Day 46 — Service/version detection + saved scan output
+- **Next:** Day 47 — Light review of ports, services and TCP states
 
 ## 📚 Learning Path
 
@@ -110,12 +110,13 @@ HTTP:
 
 ## 🧭 Week 7 — Nmap + Network Enumeration
 
-**Status: In progress — Day 43 ✅ complete; Days 44–49 pending.**
+**Status: In progress — Days 43–46 completed with actual evidence; Days 47–49 pending.**
 
 - [Full Days 43–49 plan](week-7/week-7-nmap-network-enumeration.md)
 - [Day 43 — First Nmap scan and evidence log](week-7/day-43-first-scan.md)
 - [Day 44 — Host discovery and target scope](week-7/day-44-host-discovery.md)
 - [Day 45 — Port states and TCP reasoning](week-7/day-45-port-states.md)
+- [Day 46 — Service detection and saved output](week-7/day-46-service-detection.md)
 - [Week 6 retrospective and feedback](week-6/week-6-retrospective.md)
 - Previous-week theory baseline: **7.75/10**
 - Carry-forward focus: precise terminology (endpoint vs. conversation; FIN vs. RST), reading the exact selected packet, separating observation from interpretation, documenting limitations, and independent recall.
@@ -141,6 +142,16 @@ HTTP:
 - Controlled localhost scans: port 8000 was open during the local HTTP server test; port 9999 was closed; port 8000 was closed after stopping the server.
 - Completed evidence vs. inference and six-question active recall with guided correction. Revisit the network-perspective question and RST vs. FIN in future reviews.
 - [Day 45 evidence log](week-7/day-45-port-states.md)
+
+### Day 46 ✅ Complete — Service detection + saved output
+
+- Started Python's local HTTP server bound to `127.0.0.1:8000`.
+- Basic selected-port scan (23:02 IST): `8000/tcp open`, `9999/tcp closed`.
+- `nmap -sV -p 8000 127.0.0.1` identified `http SimpleHTTPServer 0.6 (Python 3.14.8)`.
+- Saved and inspected `~/cyber-lab/week7/day46-service-detection.txt` using `-oN`.
+- `ss -lnt '( sport = :8000 )'` showed a TCP listener on `127.0.0.1:8000`, corroborating the scan.
+- Active recall completed with guided correction; revisit why port labels are not proof and how Nmap differs from `ss`.
+- [Day 46 evidence log](week-7/day-46-service-detection.md)
 
 ## 🎯 Next
 
