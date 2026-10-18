@@ -1,6 +1,6 @@
 # 🗺️ Roadmap Status
 
-## ✅ Completed through Day 45
+## ✅ Completed through Day 46
 
 ### Week 1 — Networking
 OSI, TCP/IP, IPv4/subnetting, ports.
@@ -202,7 +202,7 @@ Full review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md).
 
 ## 📘 Week 7 — Nmap + Network Enumeration
 
-**Status: In progress — Days 43–45 completed from actual terminal evidence and review; Days 46–49 remain pending.**  
+**Status: In progress — Days 43–46 completed from actual terminal evidence and review; Days 47–49 remain pending.**  
 **Theory baseline:** Day 42 = 7.75/10.  
 **Environment:** Fedora Linux; scan only localhost, an owned VM, or an explicitly authorized target.
 
@@ -220,7 +220,7 @@ Week 6 review: [`week-6/week-6-retrospective.md`](week-6/week-6-retrospective.md
 - [x] Nmap purpose and first localhost scan (Day 43)
 - [x] Host discovery and authorized target scope (Day 44)
 - [x] Open, closed and filtered port states (Day 45)
-- [ ] Basic scans, service/version detection and saved output (Day 46)
+- [x] Basic scans, service/version detection and saved output (Day 46)
 - [ ] Review port/service/TCP states and compare Nmap with `ss` (Day 47)
 - [ ] Controlled enumeration lab and optional Wireshark correlation (Day 48)
 - [ ] Closed-notes assessment and final enumeration report (Day 49)
@@ -254,8 +254,19 @@ Evidence log: [`week-7/day-45-port-states.md`](week-7/day-45-port-states.md).
 - After the local server was stopped, `nmap -p 8000 127.0.0.1` at 23:26 IST reported `8000/tcp closed`.
 - Completed evidence-vs-inference review and six-question active recall with guided correction. Revisit the network-perspective question and RST vs. FIN in future practice.
 
+### Day 46 — Service detection and saved output (completed)
+
+Evidence log: [`week-7/day-46-service-detection.md`](week-7/day-46-service-detection.md).
+
+- Local HTTP server bound to `127.0.0.1:8000`.
+- Selected-port scan at 23:02 IST: `8000/tcp open`; `9999/tcp closed`.
+- `-sV` identified `http SimpleHTTPServer 0.6 (Python 3.14.8)`.
+- Saved and inspected normal output at `~/cyber-lab/week7/day46-service-detection.txt`.
+- `ss -lnt '( sport = :8000 )'` showed `LISTEN 127.0.0.1:8000`.
+- Active recall was completed with guided correction; review service labels vs. verified application details.
+
 ### Current next step
-**Day 46 — Basic scans, service/version detection and saved output.**
+**Day 47 — Light review: ports, services and TCP states.**
 
 ## 🧠 Analyst mindset
 
